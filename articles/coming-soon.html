@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文章即将上线 | 物业专家解码</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #1a2332;
+  --color-secondary: #c9a86c;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-white: #fff;
+  --color-border: #e0e0e0;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.3s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8; background: var(--color-white); }
+
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-logo::before { content: ''; width: 32px; height: 3px; background: var(--color-secondary); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--color-text); font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; transition: var(--transition); }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-secondary); transition: width var(--transition); }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--color-primary); }
+.nav-links a.active::after { width: 100%; }
+
+.coming-soon {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 80px 24px; text-align: center;
+}
+.coming-soon-icon { font-size: 4rem; margin-bottom: 24px; }
+.coming-soon h1 { font-family: var(--font-serif); font-size: 2rem; color: var(--color-primary); margin-bottom: 16px; }
+.coming-soon p { font-size: 1.1rem; color: var(--color-text-light); max-width: 480px; margin: 0 auto 32px; }
+.coming-soon .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 4px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: var(--transition); background: var(--color-secondary); color: var(--color-primary); }
+.coming-soon .btn:hover { background: #d4b87a; transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .coming-soon h1 { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">吴瑞祥律师</a>
+    <ul class="nav-links">
+      <li><a href="../blog.html" class="active">物业专家解码</a></li>
+      <li><a href="../index.html#about">关于我</a></li>
+      <li><a href="../index.html#areas">执业领域</a></li>
+      <li><a href="../index.html#honors">专业头衔</a></li>
+      <li><a href="../index.html#contact">联系方式</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="coming-soon">
+  <div>
+    <div class="coming-soon-icon">📝</div>
+    <h1>文章即将上线</h1>
+    <p>本文正在撰写中，敬请期待。如需提前了解相关法律问题，欢迎直接联系我。</p>
+    <a href="../blog.html" class="btn">← 返回文章列表</a>
+  </div>
+</section>
+
+</body>
+</html>

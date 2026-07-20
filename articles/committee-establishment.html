@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业委会成立全流程法律实务指南 | 物业专家解码</title>
+<meta name="description" content="从筹备组组建到业委会备案登记，梳理业主委员会成立各环节的法律要点与常见障碍。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #1a2332;
+  --color-secondary: #c9a86c;
+  --color-accent: #2c3e50;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-bg: #f8f9fa;
+  --color-white: #fff;
+  --color-border: #e0e0e0;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.3s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8; background: var(--color-white); }
+
+/* ===== Navigation ===== */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); transition: var(--transition); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-logo::before { content: ''; width: 32px; height: 3px; background: var(--color-secondary); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--color-text); font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; transition: var(--transition); }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-secondary); transition: width var(--transition); }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--color-primary); }
+.nav-links a.active::after { width: 100%; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--color-primary); transition: var(--transition); }
+
+/* ===== Article Header ===== */
+.article-hero {
+  padding: 120px 24px 48px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0f1621 100%);
+  color: var(--color-white);
+  position: relative; overflow: hidden;
+}
+.article-hero::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 50%; height: 100%; background: var(--color-secondary);
+  opacity: 0.03; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.article-hero-container { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.article-hero-tag {
+  display: inline-block; padding: 4px 12px; border-radius: 4px;
+  background: rgba(201,168,108,0.2); color: var(--color-secondary);
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 16px;
+}
+.article-hero h1 {
+  font-family: var(--font-serif); font-size: 2rem; font-weight: 700;
+  line-height: 1.4; margin-bottom: 20px;
+}
+.article-hero-meta {
+  display: flex; gap: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.5);
+  align-items: center;
+}
+.article-hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+/* ===== Article Body ===== */
+.article-body {
+  max-width: 800px; margin: 0 auto; padding: 48px 24px 80px;
+}
+
+.article-back {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--color-secondary); text-decoration: none; font-size: 0.9rem;
+  font-weight: 500; margin-bottom: 32px; transition: var(--transition);
+}
+.article-back:hover { gap: 10px; }
+
+.article-content {
+  font-size: 1.05rem; line-height: 2; color: var(--color-text);
+}
+
+.article-content h2 {
+  font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-primary);
+  margin: 40px 0 16px; padding-left: 16px; border-left: 4px solid var(--color-secondary);
+}
+
+.article-content h3 {
+  font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary);
+  margin: 28px 0 12px;
+}
+
+.article-content p { margin-bottom: 20px; color: var(--color-text); }
+
+.article-content ul, .article-content ol {
+  margin: 16px 0 24px 24px;
+}
+.article-content li { margin-bottom: 8px; }
+
+.article-content blockquote {
+  border-left: 3px solid var(--color-secondary);
+  padding: 16px 24px; margin: 24px 0;
+  background: var(--color-bg); border-radius: 0 8px 8px 0;
+  color: var(--color-text-light);
+}
+
+.article-content strong { color: var(--color-primary); font-weight: 600; }
+
+.article-content .tip-box {
+  background: rgba(201,168,108,0.08); border: 1px solid rgba(201,168,108,0.2);
+  border-radius: 8px; padding: 20px 24px; margin: 24px 0;
+}
+.article-content .tip-box-title {
+  font-family: var(--font-serif); font-size: 1rem; color: var(--color-secondary);
+  font-weight: 600; margin-bottom: 8px;
+}
+
+.article-divider {
+  height: 1px; background: var(--color-border); margin: 48px 0;
+}
+
+.article-author {
+  display: flex; gap: 16px; align-items: center;
+  padding: 24px; background: var(--color-bg); border-radius: 12px;
+}
+.article-author img {
+  width: 64px; height: 64px; border-radius: 50%; object-fit: cover;
+}
+.article-author-info h4 {
+  font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-primary);
+  margin-bottom: 4px;
+}
+.article-author-info p {
+  font-size: 0.9rem; color: var(--color-text-light); margin: 0;
+}
+
+/* ===== Footer ===== */
+.footer { background: var(--color-primary); color: rgba(255,255,255,0.6); padding: 48px 24px 24px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-left { font-size: 0.9rem; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+.footer-links a:hover { color: var(--color-secondary); }
+.footer-bottom { max-width: 1200px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+
+/* ===== Scroll Top ===== */
+.scroll-top {
+  position: fixed; bottom: 32px; right: 32px; width: 48px; height: 48px; border-radius: 50%;
+  background: var(--color-secondary); color: var(--color-primary); display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); box-shadow: var(--shadow);
+  border: none; font-size: 1.2rem; z-index: 999;
+}
+.scroll-top.visible { opacity: 1; visibility: visible; }
+.scroll-top:hover { transform: translateY(-4px); }
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: rgba(255,255,255,0.97); flex-direction: column; padding: 24px; gap: 16px; border-bottom: 1px solid var(--color-border); }
+  .nav-links.active { display: flex; }
+  .nav-toggle { display: flex; }
+  .article-hero h1 { font-size: 1.5rem; }
+  .article-hero { padding: 100px 24px 32px; }
+  .article-content { font-size: 1rem; }
+  .footer-container { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">吴瑞祥律师</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../blog.html" class="active">物业专家解码</a></li>
+      <li><a href="../index.html#about">关于我</a></li>
+      <li><a href="../index.html#areas">执业领域</a></li>
+      <li><a href="../index.html#honors">专业头衔</a></li>
+      <li><a href="../index.html#contact">联系方式</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Header -->
+<section class="article-hero">
+  <div class="article-hero-container">
+    <span class="article-hero-tag">物业管理</span>
+    <h1>业委会成立全流程法律实务指南</h1>
+    <div class="article-hero-meta">
+      <span>📝 吴瑞祥律师</span>
+      <span>📅 2026-07-15</span>
+      <span>⏱️ 阅读约 8 分钟</span>
+    </div>
+  </div>
+</section>
+
+<!-- Article Body -->
+<article class="article-body">
+  <a href="../blog.html" class="article-back">← 返回文章列表</a>
+
+  <div class="article-content">
+
+    <p>业主委员会（简称"业委会"）是业主自治组织的核心执行机构，依法代表全体业主行使物业管理权利。然而，实践中业委会的成立往往面临程序复杂、阻力重重等问题。本文从法律实务角度，梳理业委会成立的全流程及关键法律要点。</p>
+
+    <h2>一、法律依据</h2>
+    <p>业委会成立的主要法律依据包括：</p>
+    <ul>
+      <li>《中华人民共和国民法典》第二百七十七条至二百八十七条</li>
+      <li>《物业管理条例》（国务院令第698号修订）</li>
+      <li>《广东省物业管理条例》</li>
+      <li>各地市物业管理实施细则</li>
+    </ul>
+
+    <h2>二、成立流程</h2>
+
+    <h3>1. 提出申请</h3>
+    <p>已交付使用的专有部分面积达到建筑物总面积<strong>百分之五十以上</strong>时，业主可以向街道办事处（乡镇人民政府）提出成立业委会的书面申请。</p>
+    <p>申请主体可以是：全体业主、部分业主（需达到法定比例）、建设单位或物业服务企业。</p>
+
+    <h3>2. 组建筹备组</h3>
+    <p>街道办事处（乡镇人民政府）收到申请后，应当在规定期限内负责组建筹备组。筹备组成员通常包括：</p>
+    <ul>
+      <li>街道办事处（乡镇人民政府）代表</li>
+      <li>社区居民委员会代表</li>
+      <li>建设单位代表</li>
+      <li>业主代表（通常占筹备组多数席位）</li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-box-title">💡 实务提示</div>
+      <p>筹备组组长由街道办事处（乡镇人民政府）代表担任。业主代表的产生方式由街道办确定，通常采用业主自荐或联名推荐方式。筹备组中业主代表的比例不得低于二分之一。</p>
+    </div>
+
+    <h3>3. 制定管理规约与业主大会议事规则</h3>
+    <p>筹备组负责拟定《管理规约》和《业主大会议事规则》草案，这是业主自治的"宪法性文件"，需经业主大会表决通过。</p>
+    <p>核心条款应包括：</p>
+    <ul>
+      <li>业主大会的议事方式和表决程序</li>
+      <li>业委会的组成、任期和职责</li>
+      <li>物业专项维修资金的筹集与管理</li>
+      <li>业主的权利与义务</li>
+    </ul>
+
+    <h3>4. 确认业主身份与投票权</h3>
+    <p>筹备组需核实业主身份、专有部分面积及建筑物总面积，确定业主的投票权数。投票权数通常按照专有部分面积和业主人数双重计算。</p>
+
+    <blockquote>注意：投票权数的确认是业委会成立过程中最容易产生争议的环节之一，建议筹备组在确认前充分公示，接受业主异议。</blockquote>
+
+    <h3>5. 召开首次业主大会</h3>
+    <p>首次业主大会应当审议以下事项：</p>
+    <ul>
+      <li>表决通过《管理规约》</li>
+      <li>表决通过《业主大会议事规则》</li>
+      <li>选举产生业主委员会委员</li>
+    </ul>
+    <p>表决需满足"双过半"或"双三分之二"条件（具体比例根据表决事项确定）。</p>
+
+    <h3>6. 业委会备案登记</h3>
+    <p>业主委员会成立后，应当自选举产生之日起<strong>30日内</strong>，向物业所在地的街道办事处（乡镇人民政府）备案。备案材料通常包括：</p>
+    <ul>
+      <li>业主大会会议记录和决议</li>
+      <li>《管理规约》和《业主大会议事规则》</li>
+      <li>业委会委员名单及联系方式</li>
+      <li>筹备组工作报告</li>
+    </ul>
+
+    <h2>三、常见障碍与应对</h2>
+
+    <h3>障碍一：建设单位或物业公司不配合</h3>
+    <p>部分建设单位或物业公司出于利益考虑，拖延或不提供成立业委会所需的材料。应对策略：依据《物业管理条例》，街道办事处有权责令建设单位配合；拒不配合的，可依法予以行政处罚。</p>
+
+    <h3>障碍二：业主参与度不足</h3>
+    <p>业主大会表决需要达到法定比例，业主参与度不足可能导致表决无法通过。应对策略：充分利用线上投票工具，加强宣传动员，必要时可申请延长投票期限。</p>
+
+    <h3>障碍三：筹备组工作争议</h3>
+    <p>筹备组在业主代表产生方式、投票权数确认等环节易产生争议。应对策略：严格依法依规操作，做好全过程留痕，重大事项及时向街道办事处请示报告。</p>
+
+    <h2>四、结语</h2>
+    <p>业委会的成立是业主行使自治权利的基础，也是小区规范治理的起点。实践中每个环节都可能遇到法律障碍，建议业主组织在筹备过程中寻求专业法律支持，确保程序合法、结果有效。</p>
+    <p>如您在业委会成立过程中遇到法律问题，欢迎联系我进行咨询。</p>
+
+  </div>
+
+  <div class="article-divider"></div>
+
+  <div class="article-author">
+    <img src="../images/photo.jpg" alt="吴瑞祥律师">
+    <div class="article-author-info">
+      <h4>吴瑞祥律师</h4>
+      <p>观象律师事务所创始合伙人 · 广东省律师协会物业管理法律专业委员会委员</p>
+    </div>
+  </div>
+</article>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      © 2026 吴瑞祥律师 · 观象律师事务所 · 粤ICP备（备案后补充）
+    </div>
+    <div class="footer-links">
+      <a href="../blog.html">物业专家解码</a>
+      <a href="../index.html#about">关于</a>
+      <a href="../index.html#contact">联系</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    本网站内容仅供一般性信息参考，不构成针对具体案件的法律意见。如需针对具体问题的法律建议，请直接联系本人。
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="回到顶部">↑</button>
+
+<script>
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('active'));
+});
+const scrollTop = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTop.classList.toggle('visible', window.scrollY > 500);
+});
+scrollTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
