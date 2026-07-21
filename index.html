@@ -375,6 +375,135 @@ body {
   font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.7;
 }
 
+/* ===== Certificates Gallery ===== */
+.certificates { background: var(--color-bg); }
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cert-card {
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-secondary);
+}
+
+.cert-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  background: #f5f5f5;
+  display: block;
+}
+
+.cert-card-info {
+  padding: 16px 20px;
+}
+
+.cert-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.cert-card-level {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cert-card-level.provincial {
+  background: rgba(201,168,108,0.15);
+  color: #a08050;
+}
+
+.cert-card-level.municipal {
+  background: rgba(44,62,80,0.08);
+  color: var(--color-accent);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 24px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .cert-grid { grid-template-columns: 1fr; }
+  .lightbox { padding: 16px; }
+}
+
 /* ===== Contact ===== */
 .contact-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -515,6 +644,7 @@ body {
       <li><a href="#about">关于我</a></li>
       <li><a href="#areas">执业领域</a></li>
       <li><a href="#honors">专业头衔</a></li>
+      <li><a href="#certificates">荣誉证书</a></li>
       <li><a href="#contact">联系方式</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle">
@@ -556,7 +686,7 @@ body {
       </div>
       <div class="about-content">
         <h3>关于我</h3>
-        <p>我是一名专注于物业管理法律服务的执业律师，观象律师事务所创始合伙人、高级合伙人。毕业于山东大学法学专业，曾任职于司法行政部门及法院审判部门，对司法实务与行政管理有着深刻理解。</p>
+        <p>我是一名专注于物业管理法律服务的执业律师，执业十年来，一直深耕在物业管理法律服务领域。我的服务出发于法律而不局限于法律，亲自在物业一线参与各类实操工作和业主组织建设工作，是我能够提供更优质服务的底气。观象律师事务所创始合伙人、高级合伙人，毕业于山东大学法学专业，曾任职于司法行政部门及法院审判部门，对司法实务与行政管理有着深刻理解。</p>
         <p>执业以来，我深耕物业管理法律领域，长期服务于业主、业主委员会、筹备组、物业管理委员会等业主组织，同时也为物业服务企业提供合规治理服务。此外，我在企业合规治理、互联网与电子商务合规领域亦有丰富经验。</p>
         <p>我相信法律服务的价值在于解决问题、预防风险，而非制造矛盾。每一个案件、每一次咨询，我都力求站在客户角度，提供务实、高效、可落地的解决方案。</p>
         <div class="about-info">
@@ -645,13 +775,87 @@ body {
         <p>受邀为物业管理行业协会成员开展法律培训，普及物业管理法律知识，提升行业法治意识。</p>
       </div>
       <div class="honor-card">
-        <span class="honor-level municipal">荣誉</span>
-        <h3>广州市律协「维护社会稳定奖」「业务成果奖」获得者</h3>
-        <p>执业成果获得广州市律师协会认可，在维护社会稳定与业务创新方面表现突出。</p>
+        <span class="honor-level municipal">市级</span>
+        <h3>广州市白云区人民法院特约调解员</h3>
+        <p>受聘为广州市白云区人民法院特约调解员，参与诉前调解工作，以专业法律能力促进纠纷高效化解。</p>
+      </div>
+      <div class="honor-card">
+        <span class="honor-level municipal">市级</span>
+        <h3>广州市律师协会物业管理优秀课讲师</h3>
+        <p>受邀为广州市律师协会讲授物业管理法律实务课程，课程内容获得行业认可，被评为优秀课讲师。</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Certificates -->
+<section class="section certificates" id="certificates">
+  <div class="section-container">
+    <div class="section-header">
+      <p class="section-label">Certificates</p>
+      <h2 class="section-title">荣誉证书</h2>
+      <p class="section-desc">部分资质证明与荣誉记录</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card" data-cert="cert-business-award.jpg" data-title="业务成果奖（返还原物纠纷）">
+        <img src="images/cert-business-award.jpg" alt="业务成果奖" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">广州市律协业务成果奖</div>
+          <span class="cert-card-level municipal">市级</span>
+        </div>
+      </div>
+      <div class="cert-card" data-cert="cert-foreign-talent.png" data-title="广东省涉外律师新锐人才">
+        <img src="images/cert-foreign-talent.png" alt="广东省涉外律师人才库入库证书" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">广东省涉外律师新锐人才</div>
+          <span class="cert-card-level provincial">省级</span>
+        </div>
+      </div>
+      <div class="cert-card" data-cert="cert-property-committee.png" data-title="省律协物业管理法律专业委员会委员">
+        <img src="images/cert-property-committee.png" alt="省律协物业委证书" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">省律协物业管理法律专业委员会委员</div>
+          <span class="cert-card-level provincial">省级</span>
+        </div>
+      </div>
+      <div class="cert-card" data-cert="cert-mediation.jpg" data-title="广州国际商贸商事调解中心调解员">
+        <img src="images/cert-mediation.jpg" alt="商事调解员聘书" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">广州国际商贸商事调解中心调解员</div>
+          <span class="cert-card-level municipal">市级</span>
+        </div>
+      </div>
+      <div class="cert-card" data-cert="cert-internet-committee.jpg" data-title="广州市律协互联网及高新技术法律专业委员会委员">
+        <img src="images/cert-internet-committee.jpg" alt="互联网委员证书" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">广州市律协互联网委员</div>
+          <span class="cert-card-level municipal">市级</span>
+        </div>
+      </div>
+      <div class="cert-card" data-cert="cert-stability-award.jpg" data-title="维护社会稳定奖">
+        <img src="images/cert-stability-award.jpg" alt="维护社会稳定奖" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">广州市律协维护社会稳定奖</div>
+          <span class="cert-card-level municipal">市级</span>
+        </div>
+      </div>
+      <div class="cert-card" data-cert="cert-zengcheng.jpg" data-title="增城聘书">
+        <img src="images/cert-zengcheng.jpg" alt="增城聘书" loading="lazy">
+        <div class="cert-card-info">
+          <div class="cert-card-title">广州市增城区相关聘书</div>
+          <span class="cert-card-level municipal">市级</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img src="" alt="" id="lightboxImg">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
 
 <!-- Contact -->
 <section class="section" id="contact">
@@ -716,6 +920,7 @@ body {
     <div class="footer-links">
       <a href="blog.html">物业专家解码</a>
       <a href="#about">关于</a>
+      <a href="#certificates">荣誉</a>
       <a href="#contact">联系</a>
     </div>
   </div>
@@ -768,6 +973,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+});
+
+// Lightbox
+document.querySelectorAll('.cert-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const img = card.getAttribute('data-cert');
+    const title = card.getAttribute('data-title');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    lightboxImg.src = 'images/' + img;
+    lightboxImg.alt = title;
+    lightboxCaption.textContent = title;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+document.getElementById('lightboxClose').addEventListener('click', () => {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+});
+
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target.id === 'lightbox') {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
 });
 </script>
 
