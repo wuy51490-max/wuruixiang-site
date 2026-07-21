@@ -135,7 +135,13 @@ body {
 
 .hero-position {
   font-size: 1.1rem; color: rgba(255,255,255,0.7);
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+}
+
+.hero-specialty {
+  font-family: var(--font-serif);
+  font-size: 1.05rem; color: var(--color-secondary);
+  margin-bottom: 12px; letter-spacing: 2px;
 }
 
 .hero-desc {
@@ -539,6 +545,13 @@ body {
 }
 .contact-item a:hover { color: var(--color-secondary); }
 
+.address-link {
+  border-bottom: 1px dashed var(--color-secondary);
+}
+.address-link:hover {
+  border-bottom-color: var(--color-secondary);
+}
+
 .contact-map {
   border-radius: 12px; overflow: hidden;
   box-shadow: var(--shadow); height: 100%; min-height: 360px;
@@ -660,6 +673,7 @@ body {
       <p class="hero-subtitle">观象律师事务所</p>
       <h1 class="hero-title">吴瑞祥<span>律师</span></h1>
       <p class="hero-position">创始合伙人 / 高级合伙人</p>
+      <p class="hero-specialty">物业法律专家</p>
       <p class="hero-desc">毕业于山东大学，曾任职于司法行政部门、法院审判部门。深耕物业管理法律、企业合规治理与互联网合规领域，专注于为业主组织、物业企业及商事主体提供高质量法律服务。</p>
       <div class="hero-badges">
         <span class="badge">物业管理法律</span>
@@ -886,7 +900,7 @@ body {
           <div class="contact-icon">📍</div>
           <div>
             <h4>地址</h4>
-            <p>广州市天河区珠江新城兴民路222号<br>天盈广场东塔3007室</p>
+            <p><a href="https://uri.amap.com/marker?position=113.3249,23.1192&name=观象律师事务所&coordsys=gcj02&callnative=1" target="_blank" rel="noopener" class="address-link">广州市天河区珠江新城兴民路222号<br>天盈广场东塔3007室</a></p>
           </div>
         </div>
         <div class="contact-item">
