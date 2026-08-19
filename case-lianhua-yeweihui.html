@@ -50,7 +50,6 @@
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8; background: var(--color-white); }
 
-/* Navigation */
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); transition: var(--transition); }
 .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
 .nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
@@ -65,7 +64,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .nav-toggle span { width: 24px; height: 2px; background: var(--color-primary); transition: var(--transition); }
 
-/* Case Header */
 .case-header { padding: 140px 24px 56px; background: linear-gradient(135deg, var(--color-primary) 0%, #0f1621 100%); color: var(--color-white); text-align: center; position: relative; overflow: hidden; }
 .case-header::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: var(--color-secondary); opacity: 0.03; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); }
 .case-header-label { font-family: var(--font-serif); font-size: 0.85rem; color: var(--color-secondary); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
@@ -75,17 +73,14 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 .case-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 4px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); font-size: 0.82rem; color: rgba(255,255,255,0.85); }
 .case-badge::before { content: '◆'; color: var(--color-secondary); font-size: 0.55rem; }
 
-/* Container */
 .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
 
-/* Case Quick Facts */
 .case-facts { max-width: 900px; margin: 0 auto; padding: 48px 24px 0; }
 .facts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .fact-item { padding: 20px 24px; background: var(--color-bg); border-radius: 12px; border-left: 3px solid var(--color-secondary); }
 .fact-label { font-size: 0.82rem; color: var(--color-text-light); margin-bottom: 4px; }
 .fact-value { font-size: 1rem; font-weight: 600; color: var(--color-primary); }
 
-/* Result highlight */
 .result-strip { max-width: 900px; margin: 40px auto 0; padding: 32px 40px; background: linear-gradient(135deg, var(--color-primary), #0f1621); border-radius: 12px; color: var(--color-white); }
 .result-strip h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-secondary); margin-bottom: 16px; }
 .result-numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 20px; }
@@ -94,7 +89,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 .result-num span { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
 .result-strip p { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.9; }
 
-/* Section */
 .section { padding: 56px 0; }
 .section-label { font-family: var(--font-serif); font-size: 0.82rem; color: var(--color-secondary); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
 .section h2 { font-family: var(--font-serif); font-size: 1.7rem; color: var(--color-primary); margin-bottom: 24px; }
@@ -102,13 +96,23 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 .section ul, .section ol { padding-left: 24px; margin-bottom: 16px; }
 .section li { font-size: 0.98rem; line-height: 1.9; color: var(--color-text); margin-bottom: 8px; }
 
-/* Verdict points */
+.difficulty-box { padding: 28px 32px; background: var(--color-bg); border-radius: 12px; margin-top: 8px; }
+.difficulty-box h3 { font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary); margin-bottom: 14px; }
+.difficulty-box ul { padding-left: 22px; }
+.difficulty-box li { font-size: 0.95rem; line-height: 1.9; color: var(--color-text); margin-bottom: 8px; }
+.difficulty-box li strong { color: var(--color-primary); }
+
+.strategy-item { padding: 24px 28px; border: 1px solid var(--color-border); border-radius: 12px; margin-bottom: 16px; background: var(--color-white); }
+.strategy-item .step { display: inline-block; font-family: var(--font-serif); font-size: 0.8rem; color: var(--color-secondary); letter-spacing: 2px; margin-bottom: 8px; }
+.strategy-item h3 { font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary); margin-bottom: 8px; }
+.strategy-item p { font-size: 0.94rem; color: var(--color-text-light); line-height: 1.9; margin: 0; }
+.strategy-item p strong { color: var(--color-accent); }
+
 .verdict-point { display: flex; gap: 16px; padding: 20px 24px; background: var(--color-bg); border-radius: 10px; margin-bottom: 14px; }
 .verdict-point .num { font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-secondary); font-weight: 700; flex-shrink: 0; }
 .verdict-point h3 { font-size: 1.02rem; color: var(--color-primary); margin-bottom: 6px; }
 .verdict-point p { font-size: 0.92rem; color: var(--color-text-light); line-height: 1.8; margin: 0; }
 
-/* Judgment docs */
 .judgment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .judgment-card { border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; cursor: pointer; transition: var(--transition); background: var(--color-white); }
 .judgment-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--color-secondary); }
@@ -117,26 +121,22 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 .judgment-card-title { font-size: 0.95rem; font-weight: 600; color: var(--color-primary); }
 .judgment-card-sub { font-size: 0.8rem; color: var(--color-text-light); margin-top: 4px; }
 
-/* Tip box */
 .tip-box { padding: 24px 28px; background: rgba(201,168,108,0.08); border: 1px solid rgba(201,168,108,0.3); border-radius: 10px; margin-top: 24px; }
 .tip-box h3 { font-size: 1.05rem; color: var(--color-primary); margin-bottom: 12px; }
 .tip-box li { font-size: 0.95rem; line-height: 1.9; color: var(--color-text); margin-bottom: 6px; }
 
-/* Author */
 .author-box { padding: 28px 32px; background: var(--color-primary); color: var(--color-white); border-radius: 12px; margin-top: 40px; }
 .author-box h3 { font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-secondary); margin-bottom: 8px; }
 .author-box p { font-size: 0.95rem; color: rgba(255,255,255,0.8); line-height: 1.9; margin-bottom: 12px; }
 .author-box a { color: var(--color-secondary); text-decoration: none; }
 .author-box a:hover { text-decoration: underline; }
 
-/* Lightbox */
 .lightbox { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.92); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 40px; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
 .lightbox.active { opacity: 1; visibility: visible; }
 .lightbox img { max-width: 100%; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
 .lightbox-close { position: absolute; top: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; border: none; transition: var(--transition); }
 .lightbox-close:hover { background: rgba(255,255,255,0.2); }
 
-/* Footer */
 .footer { background: var(--color-primary); color: rgba(255,255,255,0.6); padding: 48px 24px 24px; margin-top: 40px; }
 .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
 .footer-left { font-size: 0.9rem; }
@@ -145,7 +145,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 .footer-links a:hover { color: var(--color-secondary); }
 .footer-bottom { max-width: 1200px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.4); }
 
-/* Scroll top */
 .scroll-top { position: fixed; bottom: 32px; right: 32px; width: 48px; height: 48px; border-radius: 50%; background: var(--color-secondary); color: var(--color-primary); display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); box-shadow: var(--shadow); border: none; font-size: 1.2rem; z-index: 999; }
 .scroll-top.visible { opacity: 1; visibility: visible; }
 
@@ -168,7 +167,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">业主方物业纠纷律师吴瑞祥</a>
@@ -182,7 +180,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </nav>
 
-<!-- Case Header -->
 <section class="case-header">
   <p class="case-header-label">Successful Case · 成功案例</p>
   <h1 class="case-header-title">开发商告业委会要回160个车位、会所、物业用房<br>业主方两审全面胜诉</h1>
@@ -195,7 +192,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Quick Facts -->
 <section class="case-facts">
   <div class="facts-grid">
     <div class="fact-item animate"><div class="fact-label">案件类型</div><div class="fact-value">物权保护纠纷</div></div>
@@ -207,7 +203,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Result strip -->
 <section class="container">
   <div class="result-strip animate">
     <h2>业主方胜诉成果</h2>
@@ -221,8 +216,26 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Case background -->
+<!-- 办案手记：难点 -->
 <section class="section">
+  <div class="container">
+    <p class="section-label">Case Notes</p>
+    <h2>办案手记：这场官司，难在哪？</h2>
+    <p>这起案子，业主方手里的"牌"几乎打不出来——不是因为道理不在业主这边，而是因为历史包袱太重：</p>
+    <div class="difficulty-box animate">
+      <ul>
+        <li><strong>没有法律依据可循：</strong>小区1999年建成，而《物权法》2007年才施行。小区建成时，法律层面根本没有"专有部分""共有部分"的明确规则。</li>
+        <li><strong>历史材料几乎为零：</strong>规划、建设、验收材料大多丢失，行政部门经历多轮机构变更、合并后，连备案材料都查不到。业委会申请信息公开，得到的答复是：项目未办理《建设工程规划许可证》《建设用地规划许可证》，也无小区测绘报告。</li>
+        <li><strong>开发商手里有"王牌"：</strong>对方手握盖公章的"备案平面图"，主张图纸证明车位、会所归其所有。但仔细核查，图纸上存在大量人为手工涂改痕迹——车位的勾画、号码填写、管理用房和仓库的手动标注，都是后来填上去的。</li>
+        <li><strong>类案普遍对业主不利：</strong>很多小区业主在类似物权诉讼中，被法院以"买卖合同约定""公摊说"等理由判败诉，丢掉了共有物权。法院对这一类案件审理格外谨慎，存在类案顾虑，不敢轻易推翻既往裁判思路。</li>
+      </ul>
+    </div>
+    <p style="margin-top:20px;">耗时长、取证难、历史因素多、法律适用混乱——这是这一类"老小区架空层物权争夺"案件的典型特征。要在这种局面下为业主拿回160个车位，不能只靠喊"法律站在我们这边"，必须一步一个脚印把事实和法律打扎实。</p>
+  </div>
+</section>
+
+<!-- 案情脉络 -->
+<section class="section" style="background: var(--color-bg);">
   <div class="container">
     <p class="section-label">Case Background</p>
     <h2>案情脉络</h2>
@@ -232,11 +245,58 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Court view -->
+<!-- 代理策略 -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Legal Strategy</p>
+    <h2>代理策略与打法：六步攻坚</h2>
+    <p>面对"证据在对方、法律模糊、类案不利"的困局，代理团队没有正面硬刚，而是逐层拆解，把对方的每一张"牌"都打回原形。</p>
+
+    <div class="strategy-item animate">
+      <span class="step">STEP 01 · 打诉权</span>
+      <h3>先动摇诉请根基：开发商并非适格原告</h3>
+      <p>开发商起诉的基础是"物权被侵害"，但<strong>自始至终没有举证自己是物权权利人</strong>——它既拿不出权属证明，也证明不了车位、会所归其专有。既然权利基础都不存在，诉请自然站不住。</p>
+    </div>
+
+    <div class="strategy-item animate">
+      <span class="step">STEP 02 · 打公摊</span>
+      <h3>拆穿"没公摊就归开发商"的谬误</h3>
+      <p>法律上区分的是"专有部分"与"共有部分"，而不是"公摊"与"非公摊"。架空层是地面与上部建筑之间的结构空间，<strong>不计入建筑面积</strong>。是否计入公摊，与架空层权属毫无关联。这一招直接切断了开发商最常用的论证路径。</p>
+    </div>
+
+    <div class="strategy-item animate">
+      <span class="step">STEP 03 · 打图纸</span>
+      <h3>戳破"备案平面图"的证明力</h3>
+      <p>对方号称有盖公章的备案图纸。我们通过现场勘查，发现图纸与小区实际状况不符；且图纸上车位、管理用房、仓库均为<strong>手工涂改标注</strong>，而无关部位是机器打印——存在人为补记嫌疑。仅凭一张图纸，不能证明涉案部位的权属。</p>
+    </div>
+
+    <div class="strategy-item animate">
+      <span class="step">STEP 04 · 打规划</span>
+      <h3>以"规划缺失"反证权属不明</h3>
+      <p>申请信息公开，查实项目<strong>未办理规划许可证、无测绘报告</strong>。开发商主张车位"系规划车位"，却拿不出规划报建依据——所谓"车库"二字，连《汽车库建筑设计规范》的最低标准都够不上，更谈不上是专有部分。</p>
+    </div>
+
+    <div class="strategy-item animate">
+      <span class="step">STEP 05 · 打法律适用</span>
+      <h3>锁定《民法典》，用新法解决旧争议</h3>
+      <p>援引《最高人民法院关于适用民法典时间效力的若干规定》：本案系《民法典》施行后引发的纠纷，应适用《民法典》及区分所有权解释。民法典第274、275条把架空层、车位等共有部分的法律地位讲得清清楚楚——<strong>法律适用这一关，先占住</strong>。</p>
+    </div>
+
+    <div class="strategy-item animate">
+      <span class="step">STEP 06 · 打业委会决议</span>
+      <h3>守住"业主自治"的合法性</h3>
+      <p>业委会代管车位，依据的是经业主大会表决通过的《自管方案》，符合《民法典》第278条的程序要求。在业主大会决议未被撤销的前提下，<strong>业委会对小区共有部位的管理是"有权管理"，不是"侵权占有"</strong>。开发商作为业主之一，应遵守全体业主共同决定的自治事项。</p>
+    </div>
+
+    <p style="margin-top:8px;">六步环环相扣：先动摇诉权根基，再切断"公摊=权属"的论证路径，继而戳破图纸、坐实规划缺失，最后用《民法典》和业主自治决议把"权属归业主"的法律依据和事实基础同时钉死。一审全面胜诉后，开发商上诉，二审再次驳回，维持原判。</p>
+  </div>
+</section>
+
+<!-- 法院认定 -->
 <section class="section" style="background: var(--color-bg);">
   <div class="container">
     <p class="section-label">Court Opinion</p>
-    <h2>法院裁判要点</h2>
+    <h2>法院最终认定</h2>
     <div class="verdict-point animate"><div class="num">01</div><div><h3>一楼架空层属全体业主共有</h3><p>案涉楼宇一层系仅有结构支撑而无外墙围护的开敞空间层，物理与功能上依附于主体建筑，是建筑物整体结构的一部分，性质等同公共通道、外墙，依法属于业主共有部分。</p></div></div>
     <div class="verdict-point animate"><div class="num">02</div><div><h3>车位未计入公摊 ≠ 归开发商</h3><p>法律区分的是"专有部分"与"共有部分"，而不是"公摊"与"非公摊"。是否计入公摊，与架空层权属毫无关联。</p></div></div>
     <div class="verdict-point animate"><div class="num">03</div><div><h3>物业管理用房依法属于全体业主</h3><p>依照《民法典》第二百七十四条及《物业管理条例》相关规定，物业管理用房的所有权依法属于业主，应属全体业主共有。</p></div></div>
@@ -244,7 +304,7 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Judgment docs -->
+<!-- 判决书 -->
 <section class="section">
   <div class="container">
     <p class="section-label">Judgment Documents</p>
@@ -271,7 +331,6 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Tips -->
 <section class="section" style="background: var(--color-bg);">
   <div class="container">
     <p class="section-label">For Owners</p>
@@ -293,13 +352,11 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   </div>
 </section>
 
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose">&times;</button>
   <img src="" alt="" id="lightboxImg">
 </div>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">© 2026 吴瑞祥律师 · 观象律师事务所 · 粤ICP备（备案后补充）</div>
