@@ -219,11 +219,12 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   .case-amount { font-size: 1.5rem; }
 }
 
-/* ===== 深蓝卡文字强制覆盖（2026-08-23 用户要求：深蓝底+金色字）===== */
+
+/* ===== 深蓝卡文字强制覆盖 v2（2026-08-23 用户确认：白字+金色点缀）===== */
 .case-card { background-color: #1a2332 !important; }
-.case-card, .case-card * { color: #e9dcae !important; }
+.case-card, .case-card * { color: #ffffff !important; }
 .case-card .case-name, .case-card .case-amount, .case-card .case-difficulty strong, .case-card h3 { color: #c9a86c !important; font-weight: 700; }
-.case-card .case-meta { color: #d4c58f !important; }
+.case-card .case-meta { color: rgba(255,255,255,0.88) !important; }
 
 </style>
 </head>
