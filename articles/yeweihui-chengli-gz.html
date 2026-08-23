@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--
+核验块（法条三轨验证，2026-08-23）
+法条核验:
+  民法典第277条 | 中华人民共和国民法典（主席令第45号，2021-01-01施行，现行有效） | 北大法宝 pkulaw-law-search-semantic 核验 + obsidian wiki 民法典原文区 | 2026-08-23
+  民法典第278条 | 中华人民共和国民法典（同上，现行有效） | 北大法宝 pkulaw-law-search-semantic 核验（文本逐字比对一致） | 2026-08-23
+  广州市物业管理条例（2024修正）第22条 | 广州市第十六届人民代表大会常务委员会公告第42号，2024-08-09施行，现行有效 | 北大法宝核验一致 + obsidian wiki 法规页原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第27条 | 同上 | 北大法宝核验一致 + obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第28条、第29条 | 同上 | 北大法宝核验一致 + obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第30条、第31条 | 同上 | 北大法宝核验一致 + obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第32条、第33条、第34条 | 同上 | 北大法宝核验一致 + obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第36条、第37条 | 同上 | 北大法宝核验一致 + obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第39条 | 同上 | 北大法宝核验一致（30日内备案、5个工作日回执、变更备案15日）+ obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第46条、第47条、第48条、第49条、第50条 | 同上 | 北大法宝核验一致 + obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  广州市物业管理条例（2024修正）第100条、第102条 | 同上 | obsidian 原文区（以 obsidian 法规页原文区为准） | 2026-08-23
+  关于贯彻实施广州市物业管理条例的意见 | 穗建物业〔2021〕17号，2021-01-18，现行有效 | 北大法宝核验 + obsidian 原文区 | 2026-08-23
+  广州市住建局告知书（H202602884，2026-05-29）
+  广州海珠公建配套不计投票面积案（2020一审行政判决，无公开案号） | 幼儿园有产权也不计入投票权数/面积 | 琉璃律师公众号文章（wxpublic_articles） | 2026-08-23 | 官方答复：条例第47条物业管理委员会系对省条例的补充性制度设计、非成立业主大会的前置环节；业主可依《广东省物业管理条例》通过业主大会筹备组组织成立业主大会、选举业委会 | 用户提供官方告知书图片（2026-05-29，经视觉桥接转写） | 2026-08-23
+  广州市业主决策电子投票规则 | 穗建规字〔2023〕14号，2024-01-04施行，现行有效（有效期5年） | 北大法宝核验（文号、期限条款）+ obsidian 原文区 | 2026-08-23
+  广州市业主大会会议工作指引（含示范文书） | 穗建物业〔2022〕268号印发，现行有效 | obsidian 原文区（2026-08-13核验） | 2026-08-23
+  业主大会和业主委员会指导规则 | 建房〔2009〕274号，2010-01-01施行，现行有效 | 北大法宝核验（文件现行有效）+ obsidian 原文区（第9、10、12、15、31、33条） | 2026-08-23
+案例核验:
+  (2020)粤民申9823号 | 广东高院：业委会选举资格/程序/结果争议不属于民事诉讼受案范围，应向住建部门或街道申请解决（《物业管理条例》第19条） | 用户 raw 库判决书原件（广东省高级人民法院 2020-11-02） | 2026-08-23
+  本文其余未引用具体案号；电子投票"绑定可解绑"防范提示为实务经验表述（来源：obsidian 实务笔记·珠三角五城业委会成立对比·君华华府保盘案经验，无案号故不写案号） | 2026-08-23
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>广州业委会怎么成立？从10%业主联名到备案的全流程指南 | 业主方物业纠纷律师吴瑞祥</title>
+<meta name="description" content="广州业主成立业委会全流程：10%业主联名申请、物业管理委员会或业主大会筹备组双路径、业主身份与投票权确认、首次业主大会表决比例（双三分之二参与、双过半数同意）、业委会备案材料与时限。以《广州市物业管理条例》（2024修正）第22、27、28、37、39、47条和《广州市业主决策电子投票规则》为据，逐条讲清广州特色，帮业主拆招。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "广州成立业委会要多少业主同意？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分两步看：第一步是申请门槛，占业主总人数10%以上的业主联名申请，街道办应当自收到申请之日起六个月内组织成立物业管理委员会（《广州市物业管理条例》第47条）。第二步是首次业主大会表决，应当由专有部分面积占比三分之二以上的业主且人数占比三分之二以上的业主参与表决，经参与表决专有部分面积过半数的业主且参与表决人数过半数的业主同意，管理规约、议事规则才能通过，业委会委员才能当选（民法典第278条、广州条例第22条）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "开发商和物业不配合，业委会还能成立吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。建设单位、物业服务人有法定的协助义务，应当协助召开业主大会会议并提供人力、场地支持（广州条例第26条）。建设单位不按规定移交资料的，区房屋行政主管部门责令限期改正，逾期仍不移交的可处一万元以上十万元以下罚款（广州条例第102条）。广州的物管会由街道办组织成立，不需要依赖开发商的配合；业主还可以依据广州条例第26条向区房屋行政主管部门申请查询业主清册，区住建部门应当自受理之日起二十日内免费提供。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "筹备组怎么组成、谁说了算？广州现在还有筹备组吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "两条路都行：① 筹备组路线（广东省物业管理条例）：业主联名申请，街道组织成立业主大会筹备组组织首次业主大会；② 物委会路线（广州条例第47条）：向街道申请成立物业管理委员会，由物委会承担筹备职能。2026年5月广州市住建局官方答复明确：物委会是补充性制度设计、并非成立业主大会的前置环节，业主可自行选择。物委会成员九人以上单数，含街道（镇）代表、居委会代表、区房管部门代表、物业代表和业主代表，主任由街道（镇）代表担任（广州条例第49条）；走筹备组路线则业主主动性更强。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "业主大会怎么开才算数？参与和表决比例是多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "广州的要求分四层：一是会前公示，会议召开三十日前公示议题、议程、表决规则、委员候选人等事项，公示期不少于十五日（广州条例第27条）；二是参与门槛，应当由专有部分面积占比三分之二以上的业主且人数占比三分之二以上的业主参与表决（民法典第278条、广州条例第22条）；三是同意门槛，管理规约、议事规则通过和选举委员属普通事项，经参与表决面积和人数双过半数同意即可，筹集维修资金、改建重建等重大事项需双四分之三（广州条例第22条）；四是结果公示，表决结果产生之日起七日内公示，电子投票和集体讨论形式公示期十五日，书面征求意见形式公示三十日，公示期满无异议才生效（广州条例第33条）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "人在外地怎么投票？广州的电子投票怎么用？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "广州业主大会应当优先采用业主决策电子投票系统表决（广州条例第31条）。业主在“广州物业管理”公众号绑定实名身份后即可线上投票，投票期限不少于五日、不超过三十日（电子投票规则第14条），人在外地完全可以投。实在无法使用电子投票的，可以委托居民委员会或者代理人投票，须在电子投票截止时间三日前提交书面委托书，委托书要载明委托事项、业主本人对表决议题的表决意见及委托期限（电子投票规则第21条）。未投票业主的投票权数不计入已表决票（电子投票规则第22条）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "业委会备案要交什么材料？多久能办好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "业委会应当自选举产生之日起三十日内向镇人民政府、街道办事处备案，提交四类材料：①业主大会议事规则、管理规约；②业主大会表决结果明细表、汇总表；③业主大会会议决定；④业主委员会委员和候补委员的姓名、职务、房号、联系方式等基本情况。材料齐全、符合法定条件的，街道办应当在收到资料后五个工作日内发出备案回执（广州条例第39条）。拿到备案回执后才能向公安机关申请刻制业主委员会、业主大会印章，刻好十日内要把印章样式书面报告街道办。逾期未备案的，街道办责令限期报送并通告全体业主（广州条例第100条）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "成立业委会要花多少钱？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正常路径下，业主自掏腰包的硬性费用很少：电子投票系统免费使用（电子投票规则第2条）；业主大会会议、业委会办公经费按规定可以从业主共有资金中列支，包括业委会办公经费、委员补贴、专职工作人员薪酬和召开业主大会会议所需费用（广州条例第96条）。前期如果要请律师指导程序、起草管理规约和议事规则、应对物业阻挠，会产生律师费，通常由业主分摊或从共有资金中列支，具体按工作量协商。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "物业阻挠成立业委会怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "任何单位或者个人不得阻挠业主依法召开业主大会会议或者成立业主委员会（广州条例第46条）。物业阻挠的应对路径：一是固定证据，拒提供场地、拒配合、散发不实信息都拍照留存；二是向镇人民政府、街道办事处和区房屋行政主管部门投诉，街道和区住建部门有指导、监督职责（广州条例第7条、第99条）；三是物业负责人为业主的，其阻挠行为还可作为委员任职审查关注点；四是情节严重的，可依法追究其法律责任。广州的物管会由街道牵头成立，本身就是绕开物业阻挠的制度设计。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "没有业委会时，物业管理委员会能干什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "物管会的职责包括：负责筹备成立业主委员会、组织换届选举业主委员会、组织召开业主大会会议、根据业主大会的决议和决定办理物业管理相关事务（广州条例第48条）。也就是说，在业委会成立前，物管会可以组织业主大会对选聘解聘物业等事项进行表决，把业主共同决定的程序先跑起来；业委会选举产生后，物管会停止履职，十日内与业委会办理移交手续后解散（广州条例第47条第二款）。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "车位算不算投票权？租客能投票吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "业主人数按专有部分数量计算，一个专有部分按一人计算；建设单位尚未出售和虽已出售但尚未交付的部分，以及同一买受人拥有一个以上专有部分的，按一人计算（广州条例第28条）。专有部分面积按不动产登记簿记载的面积计算（广州条例第28条）。业主是房屋所有权人，租客不是业主，不能以自己名义投票；但业主可以委托代理人行使表决权，须出具载明委托事项、权限及期限的书面委托书（广州条例第29条）。"
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #1a2332;
+  --color-secondary: #c9a86c;
+  --color-accent: #2c3e50;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-bg: #f8f9fa;
+  --color-white: #fff;
+  --color-border: #e0e0e0;
+  --color-warn: #8c5a1e;
+  --color-warn-bg: #fdf6ec;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.3s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8; background: var(--color-white); }
+
+/* Navigation */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); transition: var(--transition); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-logo::before { content: ''; width: 32px; height: 3px; background: var(--color-secondary); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--color-text); font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; transition: var(--transition); }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-secondary); transition: width var(--transition); }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--color-primary); }
+.nav-links a.active::after { width: 100%; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--color-primary); transition: var(--transition); }
+
+/* Hero */
+.article-hero { padding: 130px 24px 56px; background: linear-gradient(135deg, #1a2332 0%, #0f1621 100%); color: var(--color-white); position: relative; overflow: hidden; }
+.article-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: var(--color-secondary); opacity: 0.04; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); }
+.article-hero::after { content: '业委会'; position: absolute; right: -20px; bottom: -40px; font-family: var(--font-serif); font-size: 9rem; font-weight: 700; color: rgba(255,255,255,0.05); }
+.article-hero-container { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+.article-hero-tag { display: inline-block; padding: 5px 14px; border-radius: 4px; background: rgba(201,168,108,0.15); color: var(--color-secondary); font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 22px; }
+.article-hero h1 { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; line-height: 1.45; margin-bottom: 18px; }
+.article-hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.72); max-width: 720px; line-height: 1.9; }
+.article-hero-meta { margin-top: 26px; display: flex; align-items: center; gap: 16px; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+/* Stats band */
+.stats-band { max-width: 860px; margin: -34px auto 0; padding: 0 24px; position: relative; z-index: 2; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #e4dccb; border: 1px solid #e4dccb; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+.stat-item { background: var(--color-white); padding: 22px 16px; text-align: center; }
+.stat-num { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--color-secondary); display: block; line-height: 1.3; }
+.stat-label { font-size: 0.8rem; color: var(--color-text-light); margin-top: 4px; display: block; }
+
+/* Article body */
+.article-body { max-width: 860px; margin: 0 auto; padding: 56px 24px 20px; }
+.article-content h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-primary); margin: 52px 0 20px; padding-left: 16px; border-left: 4px solid var(--color-secondary); line-height: 1.5; }
+.article-content h3 { font-size: 1.12rem; color: var(--color-primary); margin: 28px 0 12px; }
+.article-content p { margin-bottom: 18px; color: var(--color-text); }
+.article-content strong { color: var(--color-primary); font-weight: 600; }
+.article-content ul { margin: 0 0 20px 0; padding-left: 0; list-style: none; }
+.article-content li { margin-bottom: 10px; padding-left: 22px; position: relative; color: var(--color-text); }
+.article-content li::before { content: '◆'; position: absolute; left: 0; top: 0; color: var(--color-secondary); font-size: 0.7rem; }
+.article-content blockquote { margin: 20px 0; padding: 16px 22px; background: var(--color-bg); border-left: 4px solid var(--color-secondary); border-radius: 0 8px 8px 0; color: var(--color-text); font-size: 0.95rem; }
+.article-content .law-quote { background: #faf7f0; border-left: 4px solid #c9a86c; padding: 16px 22px; border-radius: 0 8px 8px 0; margin: 20px 0; font-family: var(--font-serif); color: var(--color-accent); font-size: 0.95rem; }
+.article-content .law-quote .law-title { font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 6px; }
+
+/* Tip box */
+.tip-box { background: #eef3f8; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+.tip-box-title { font-weight: 700; color: var(--color-accent); margin-bottom: 8px; font-size: 0.95rem; }
+.tip-box p { margin: 0; font-size: 0.95rem; }
+
+/* Warn box */
+.warn-box { background: var(--color-warn-bg); border-left: 4px solid var(--color-warn); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+.warn-box-title { font-weight: 700; color: var(--color-warn); margin-bottom: 8px; font-size: 0.95rem; }
+.warn-box p { margin: 0; font-size: 0.95rem; color: var(--color-text); }
+
+/* Timeline / Steps */
+.steps { margin: 24px 0; }
+.step { display: flex; gap: 18px; margin-bottom: 20px; }
+.step-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary); color: var(--color-secondary); font-family: var(--font-serif); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 1.05rem; }
+.step-body h4 { font-size: 1.05rem; color: var(--color-primary); margin-bottom: 6px; }
+.step-body p { margin-bottom: 8px; }
+
+/* Mini table */
+.mini-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.92rem; }
+.mini-table th { background: var(--color-primary); color: var(--color-white); padding: 10px 14px; text-align: left; font-weight: 600; }
+.mini-table td { border: 1px solid var(--color-border); padding: 10px 14px; vertical-align: top; }
+.mini-table tr:nth-child(even) td { background: var(--color-bg); }
+
+/* FAQ */
+.faq-list { margin: 24px 0; }
+.faq-item { border: 1px solid var(--color-border); border-radius: 10px; padding: 22px 26px; margin-bottom: 16px; background: var(--color-white); transition: box-shadow var(--transition); }
+.faq-item:hover { box-shadow: var(--shadow); }
+.faq-q { font-weight: 700; color: var(--color-primary); font-size: 1.02rem; margin-bottom: 10px; }
+.faq-q::before { content: 'Q'; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--color-secondary); color: var(--color-white); border-radius: 4px; font-size: 0.8rem; margin-right: 10px; }
+.faq-a { font-size: 0.95rem; color: var(--color-text); }
+.faq-a::before { content: 'A'; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--color-accent); color: var(--color-white); border-radius: 4px; font-size: 0.8rem; margin-right: 10px; font-weight: 700; }
+
+/* Author */
+.article-divider { border: none; border-top: 1px solid var(--color-border); margin: 48px 0 24px; }
+.article-author { display: flex; gap: 18px; align-items: center; background: var(--color-bg); border-radius: 12px; padding: 24px 28px; }
+.article-author-info h4 { font-family: var(--font-serif); color: var(--color-primary); margin-bottom: 6px; }
+.article-author-info p { color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.7; }
+.article-author-info a { color: var(--color-secondary); text-decoration: none; }
+.article-author-info a:hover { text-decoration: underline; }
+
+/* Disclaimer */
+.disclaimer { font-size: 0.78rem; color: var(--color-text-light); padding: 20px 24px; background: var(--color-bg); border-radius: 10px; margin: 28px 0; line-height: 1.8; }
+
+/* Footer */
+.footer { background: var(--color-primary); color: rgba(255,255,255,0.6); padding: 40px 24px; margin-top: 40px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-bottom { font-size: 0.85rem; }
+.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; margin-left: 24px; font-size: 0.85rem; }
+.footer-links a:hover { color: var(--color-secondary); }
+
+/* Scroll top */
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary); color: var(--color-white); border: none; font-size: 1.1rem; cursor: pointer; opacity: 0; transition: opacity var(--transition); box-shadow: var(--shadow); z-index: 100; }
+.scroll-top.visible { opacity: 1; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--color-white); flex-direction: column; padding: 20px 24px; gap: 16px; border-bottom: 1px solid var(--color-border); }
+  .nav-links.open { display: flex; }
+  .article-hero h1 { font-size: 1.6rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.case-meta { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+.case-difficulty { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.92rem; color: #ffffff; }
+.case-difficulty strong { color: #c9a86c; }
+.case-name { font-size: 1.1rem; font-weight: 700; color: #ffffff; }
+
+
+/* ===== 深蓝卡文字强制覆盖 v2（2026-08-23 用户确认：白字+金色点缀）===== */
+.case-card { background-color: #1a2332 !important; }
+.case-card, .case-card * { color: #ffffff !important; }
+.case-card .case-name, .case-card .case-amount, .case-card .case-difficulty strong, .case-card h3 { color: #c9a86c !important; font-weight: 700; }
+.case-card .case-meta { color: rgba(255,255,255,0.88) !important; }
+.case-card a { color: #e9dcae !important; text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">吴瑞祥律师</a>
+    <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../blog.html">物业专家解码</a></li>
+      <li><a href="../index.html#about">关于我</a></li>
+      <li><a href="../index.html#areas">执业领域</a></li>
+      <li><a href="../index.html#honors">专业头衔</a></li>
+      <li><a href="../index.html#contact">联系方式</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-container">
+    <span class="article-hero-tag">业主自治 · 业委会成立（广州版）</span>
+    <h1>广州业委会怎么成立？<br>从10%业主联名到备案拿回执，一条路讲透</h1>
+    <p class="article-hero-desc">广州成立业委会，可以走物业管理委员会，也可以走业主大会筹备组——两条路都合法。本文按《广州市物业管理条例》（2024修正）和《广东省物业管理条例》逐条拆解：申请门槛、物委会/筹备组怎么组、投票权怎么算、首次业主大会表决规则、备案要什么材料，以及电子投票、物业阻挠这些广州业主最常踩的坑。</p>
+    <div class="article-hero-meta">
+      <span>吴瑞祥律师 · 业主方物业纠纷</span>
+      <span>·</span>
+      <span>广州 · 观象律师事务所</span>
+      <span>·</span>
+      <span>更新于 2026-08-23</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item"><span class="stat-num">10%</span><span class="stat-label">业主联名 即可申请</span></div>
+    <div class="stat-item"><span class="stat-num">6个月</span><span class="stat-label">街道办组织物管会时限</span></div>
+    <div class="stat-item"><span class="stat-num">2/3</span><span class="stat-label">参与表决 面积+人数门槛</span></div>
+    <div class="stat-item"><span class="stat-num">30日</span><span class="stat-label">选举后备案 5个工作日回执</span></div>
+  </div>
+</div>
+
+<article class="article-body">
+  <div class="article-content">
+
+    <p>「我们小区想成立业委会，听说要先有 10% 业主联名，到底是走『物管会』还是『筹备组』？怎么弄？」——这是广州业主问我最频繁的问题。</p>
+    <p>先给结论：<strong>在广州，成立业委会可以走「物业管理委员会」路线，也可以走「业主大会筹备组」路线（2026年5月市住建局官方答复确认物委会并非前置环节）。</strong>物委会路线是广州条例（2024修正）的特色设计——由街道牵头组建、含业主代表，能组织业主大会并代行部分业主共同决定程序；筹备组路线则业主主动性更强。下面按流程一步步讲，两条路的差异逐处点明。</p>
+
+    <h2>一、先认清两条路：物委会，还是筹备组？</h2>
+    <p>民法典第 277 条给了业委会成立的宪法性依据：业主可以设立业主大会、选举业主委员会，具体条件和程序依照法律、法规的规定；地方人民政府有关部门、居民委员会应当给予指导和协助。</p>
+    <div class="law-quote">
+      <span class="law-title">《中华人民共和国民法典》第二百七十七条</span>
+      「业主可以设立业主大会，选举业主委员会。业主大会、业主委员会成立的具体条件和程序，依照法律、法规的规定。地方人民政府有关部门、居民委员会应当对设立业主大会和选举业主委员会给予指导和协助。」
+    </div>
+    <p>2026 年 5 月，广州市住建局在官方答复中明确：条例第 47 条的<strong>物业管理委员会是广州对省条例的补充性制度设计，并非成立业主大会的前置环节</strong>。也就是说，广州业主成立业委会现在有<strong>两条路</strong>，都合法、都可以走：</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">A</div><div class="step-body"><strong>筹备组路线（依《广东省物业管理条例》）</strong>：业主联名申请 → 街道/镇组织成立<strong>业主大会筹备组</strong> → 筹备组组织首次业主大会 → 选举业委会 → 备案。业主主动性更强，是传统路径。</div></div>
+      <div class="step"><div class="step-num">B</div><div class="step-body"><strong>物委会路线（依《广州市物业管理条例》第47条）</strong>：向街道/镇申请成立<strong>物业管理委员会</strong>（街道代表任主任、含业主代表）→ 物委会承担筹备职能、组织业主大会 → 选举业委会 → 物委会移交后解散。</div></div>
+    </div>
+    <p>两条路<strong>选哪条，取决于小区情况</strong>：业主自治基础好、能组织起来的，走筹备组路线更主动；小区长期无人牵头、需要街道兜底的，物委会路线更现实（物委会还能组织选聘物业等事项的表决）。下面按"申请 → 组织 → 表决 → 备案"完整流程讲，两条路的差异会逐处点明。</p>
+
+    <h2>二、第一步：够不够格申请——四个条件与10%联名</h2>
+    <p>广州条例第 47 条规定，符合下列条件的，镇人民政府、街道办事处应当自收到业主申请之日起<strong>六个月内</strong>组织成立物业管理委员会：</p>
+    <ul>
+      <li>已划定物业服务区域</li>
+      <li>已交付使用的专有部分面积达到建筑规划总面积百分之五十以上</li>
+      <li>未成立业主委员会，或者需要换届选举业主委员会</li>
+      <li><strong>占业主总人数百分之十以上的业主申请</strong></li>
+    </ul>
+    <p>这里两个数字要分清：<strong>「面积 50% 以上交付」是小区资格门槛，「10% 业主联名」是启动门槛。</strong>很多新盘卡在第一条——交付面积不够一半，想成立也成立不了。</p>
+    <p>联名申请怎么写？实务上建议书面、实名，写清小区名称、申请事项、申请人房号、签名和联系方式，能附上不动产权证复印件最好。凑齐 10% 业主人数后交给街道办，并保留递交凭证（回执、签收记录、邮寄凭证都行），因为「六个月内组织成立」的时限从收到申请起算，这个时间节点很重要。</p>
+    <div class="tip-box">
+      <div class="tip-box-title">📋 业主人数怎么数？</div>
+      <p>按广州条例第 28 条：业主人数按照专有部分的数量计算，一个专有部分按一人计算；但建设单位尚未出售和虽已出售但尚未交付的部分，以及同一买受人拥有一个以上专有部分的，按一人计算。也就是说，同一业主买三套房也只算一人，开发商未售出的房子不计入业主人数。</p>
+    </div>
+
+    <h2>三、第二步：物管会怎么组成、谁说了算</h2>
+    <p>广州条例第 49 条规定，物业管理委员会成员人数为<strong>九人以上单数</strong>，由下列人员组成：</p>
+    <ul>
+      <li>镇人民政府代表或者街道办事处代表一人</li>
+      <li>居民委员会代表一人</li>
+      <li>区房屋行政主管部门代表一人</li>
+      <li>物业服务人代表一人</li>
+      <li>业主代表（具体人数由街道、镇根据物业服务区域规模、物业类型、业主户数等因素确定）</li>
+    </ul>
+    <p><strong>物管会主任由街道（镇）代表担任，副主任由居委会代表和一名业主代表担任。</strong>单位代表人选由各自单位推荐；业主代表人选应当符合业委会委员的资格条件（完全民事行为能力、守法守约、热心公益等），由街道、镇通过听取业主意见、召开座谈会等方式，在自愿参加的业主中推荐产生。</p>
+    <p>物管会成员名单要向全体业主公示，<strong>公示期不少于十五日</strong>，业主有异议可书面实名提出（广州条例第 50 条）。</p>
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 业主代表名额是第一个博弈点</div>
+      <p>业主代表人数由街道定，候选人由街道推荐产生——这就是为什么很多小区在「物管会成立」这一步就开始吵。业主方要做的：一是尽早主动报名、争取被推荐；二是盯住公示期，对不合适的名单在十五日内书面实名提异议。物业不派代表参加，不影响物管会成立（第 49 条第三款），这条对业主有利。</p>
+    </div>
+
+    <h2>四、第三步：确认业主身份与投票权</h2>
+    <div class="tip-box">
+      <div class="tip-box-title">📌 投票权基数：公建配套不计入</div>
+      <p>广州海珠区 2020 年一审行政判决（琉璃律师团队代理）明确：小区<strong>幼儿园等公建配套设施即便办了产权证，也不能计入投票权数和投票面积</strong>；住建局、街道据此作出的撤销业主大会决定，被法院一并撤销。业主大会筹备阶段算投票基数时，要把公建配套、车位等按规则区分清楚，避免基数错误导致决议效力被挑战。</p>
+    </div>
+    <p>这是整个流程里最容易出争议、也最容易被日后撤销决议攻击的环节。广州条例第 28 条规定，业主大会会议组织者应当在表决前确认业主身份、业主总人数、专有部分面积和专有部分总面积，计算口径是法定的：</p>
+    <table class="mini-table">
+      <tr><th>项目</th><th>计算方式（广州条例第28条）</th></tr>
+      <tr><td>专有部分面积</td><td>按不动产登记簿记载的面积计算；尚未登记的按测绘机构实测面积；尚未实测的按房屋买卖合同记载面积</td></tr>
+      <tr><td>专有部分总面积</td><td>专有部分面积的总和</td></tr>
+      <tr><td>业主人数</td><td>按专有部分数量计算，一个专有部分算一人；未出售/已售未交付部分及同一买受人多个专有部分均按一人</td></tr>
+      <tr><td>业主总人数</td><td>按上项规则的总和</td></tr>
+    </table>
+    <p>表决权怎么行使？广州条例第 29 条：专有部分有两个以上所有权人的，推选一人行使表决权；业主是无/限制民事行为能力人的，由法定监护人行使；业主是法人的，由法定代表人行使；<strong>业主可以委托代理人行使表决权，代理人应当出具由业主签名或盖章、载明委托事项、委托权限及期限的书面委托书。</strong></p>
+    <div class="tip-box">
+      <div class="tip-box-title">📋 业主清册从哪来？</div>
+      <p>广州条例第 26 条给了业主一条硬通道：业主大会会议组织者向区房屋行政主管部门申请查询物业服务区域内业主清册等文件资料的，区房屋行政主管部门应当自受理申请之日起<strong>二十日内免费提供</strong>。不动产登记部门与住建部门之间会共享业主清册信息。不用靠物业施舍名单。</p>
+    </div>
+
+    <h2>五、第四步：起草两份「小区宪法」——管理规约与议事规则</h2>
+    <p>广州条例第 23 条规定：管理规约应当对物业的使用维护管理、业主共同权益、业主义务、共有资金、审计制度、印章管理、违约责任等作出约定；业主大会议事规则应当就业主大会名称、议事方式、业主投票权数认定方法、表决程序、业委会的选举和议事规则、人员组成、职责、任期及职务终止等作出约定。两份文件对全体业主、物业使用人具有约束力。</p>
+    <p>起草工作由物管会牵头（穗建物业〔2021〕17号意见第六部分），应当通过召开座谈会等方式听取业主意见并集体讨论，草案成熟后提交业主大会表决。市住建部门公布了示范文本（管理规约示范文本、业主大会议事规则示范文本，穗建物业〔2021〕336号印发），业主可以在示范文本基础上结合小区实际修改——<strong>别直接照抄示范文本，有些条款值得往对业主有利的方向写。</strong></p>
+    <ul>
+      <li>议事规则里写清投票权数认定方法（比如车位面积是否计入专有部分面积）</li>
+      <li>表决程序、公示方式、公示期</li>
+      <li>业委会人数（广州是五至十五人单数，百户以下可三人）、任期（不超过五年）</li>
+      <li>共有资金、公共收益的管理与审计制度</li>
+      <li>印章管理、委员罢免与补选程序</li>
+    </ul>
+
+    <h2>六、第五步：首次业主大会——怎么开才算数</h2>
+    <p>这是整个流程的核心，也是最容易被程序瑕疵「翻车」的一步。广州的程序要求，一环扣一环：</p>
+
+    <h3>1. 会前公示（第27条）</h3>
+    <p>业主大会会议组织者应当于会议召开<strong>三十日前</strong>，将会议的时间、地点、形式、议题、议程、表决规则、业主委员会委员候选人等事项向全体业主公示，公示期<strong>不少于十五日</strong>。公示期间要通过座谈会等听取业主意见；业主有异议的书面实名提出，组织者五日内处理答复；异议成立的要调整会议时间重新公示。未经改正不得召开会议。</p>
+
+    <h3>2. 表决事项与参与比例（第22条）</h3>
+    <p>首次业主大会通常表决三件事：通过管理规约、通过议事规则、选举业委会委员。这三件事都属于业主共同决定事项，适用统一的参与门槛和同意门槛：</p>
+    <div class="law-quote">
+      <span class="law-title">《广州市物业管理条例》（2024修正）第二十二条</span>
+      「业主共同决定事项，应当由专有部分面积占比三分之二以上的业主且人数占比三分之二以上的业主参与表决。决定本条第一款第六项至第八项规定的事项（筹集维修资金、改建重建、改变共有部分用途或经营），应当经参与表决专有部分面积四分之三以上的业主且参与表决人数四分之三以上的业主同意。决定本条第一款其他事项（含通过规约、议事规则、选举业委会委员），应当经参与表决专有部分面积过半数的业主且参与表决人数过半数的业主同意。」
+    </div>
+    <p>对应民法典第 278 条，两个门槛必须同时满足：<strong>参与门槛是「双三分之二」（面积占比 2/3 以上 且 人数占比 2/3 以上参与表决）；同意门槛分两类——普通事项（含成立业委会三件事）「双过半数」，重大事项「双四分之三」。</strong></p>
+
+    <h3>3. 表决形式（第30条）</h3>
+    <p>业主大会会议可以采用<strong>电子投票、书面征求意见和集体讨论</strong>三种形式表决。参与表决的业主应当明示同意、反对或者弃权。广州明确：<strong>未投票表决业主的投票权数不得计入已表决票</strong>（广州市业主大会会议工作指引、电子投票规则第22条）——这和有些城市「默示同意计入」完全不同，意味着动员业主真实投票至关重要。</p>
+
+    <h3>4. 监票计票（第32条）</h3>
+    <p>采用集体讨论、书面征求意见形式的，应当邀请<strong>不少于五名业主</strong>担任监票人、计票人，可以邀请第三方参与监票；<strong>业委会委员、委员候选人及其近亲属不得担任监票人、计票人</strong>。书面征求意见的，投票期限届满之日起三十日内完成统计。</p>
+
+    <h3>5. 结果公示与生效（第33条）</h3>
+    <p>表决结果产生之日起<strong>七日内</strong>公示，公示内容要包括已投票业主的房号、专有部分面积、表决意见等明细。<strong>电子投票和集体讨论形式的公示期为十五日，书面征求意见形式的公示期为三十日。</strong>公示期届满无异议或异议不成立的，表决结果自公示期届满次日起生效。</p>
+
+    <h3>6. 异议救济（第34条）</h3>
+    <p>对表决结果有异议的，在公示期内书面实名向街道办提出，并出示身份证明、不动产权属证明等材料；街道办自受理之日起三十日内核实处理，情况复杂的可延长三十日。异议成立的重新统计并通告。</p>
+
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 广州式「双过半」怎么理解</div>
+      <p>很多人把「双过半」误读成「全体业主过半数同意」。广州的口径是：先要有面积、人数双 2/3 的业主参与表决，然后参与表决的人里面积、人数双过半同意。举例：100 户业主、总面积 1 万㎡，至少有 67 户、6700㎡ 参与投票，其中至少 34 户、3350㎡ 同意，规约才算通过。投票率越低，越难达标——所以电子投票 + 入户动员缺一不可。</p>
+    </div>
+
+    <h2>七、第六步：选举业委会委员</h2>
+    <div class="tip-box">
+      <div class="tip-box-title">⚠️ 选举争议走行政渠道，别直接打民事官司</div>
+      <p>广东省高院（2020）粤民申9823号明确：认为业委会<strong>选举资格、选举程序、选举结果违法</strong>的，应向物业所在地的区住建部门或街道申请责令改正/撤销（《物业管理条例》第19条），<strong>这类争议不属于民事诉讼受案范围</strong>。选举过程有问题，先走行政投诉，别在法院门口浪费时间；而业委会<strong>作出决议</strong>侵害权益的，才是民法典280条的民事撤销权路径。</p>
+    </div>
+    <p>广州条例第 36、37 条规定：业委会委员、候补委员应当符合国家、省规定的条件（完全民事行为能力、遵守法律法规、遵守议事规则和管理规约、模范履行业主义务、热心公益、责任心强、有组织能力和必要工作时间等——业主大会和业主委员会指导规则第31条）；业主大会会议组织者应当审查候选人资格，不符合条件的不列入候选人名单。</p>
+    <ul>
+      <li><strong>人数：五至十五人的单数委员</strong>；户数一百户以下的住宅小区，可以由三人组成</li>
+      <li><strong>任期：不超过五年</strong>，由议事规则约定，可连选连任</li>
+      <li>成立之日起十日内召开首次会议，推选主任、副主任</li>
+      <li>实行差额选举的，未当选但得票达到法定票数的候选人可成为候补委员</li>
+      <li>委员人数不足时，候补委员按得票数依次递补；递补后仍不足最低人数的，居委会六十日内组织召开业主大会补选</li>
+    </ul>
+
+    <h2>八、第七步：备案、刻章、拿回执</h2>
+    <p>业委会成立后的临门一脚，很多人栽在这里：<strong>广州条例第 39 条，业委会应当自选举产生之日起三十日内，向镇人民政府、街道办事处备案。</strong></p>
+    <p>备案材料四件套：</p>
+    <ul>
+      <li>业主大会议事规则、管理规约</li>
+      <li>业主大会表决结果明细表、汇总表</li>
+      <li>业主大会会议决定</li>
+      <li>业主委员会委员和候补委员的姓名、职务、房号、联系方式等基本情况</li>
+    </ul>
+    <p>材料齐全、符合法定条件的，街道办应当自收到资料后<strong>五个工作日内发出备案回执</strong>，同时抄送区房屋行政主管部门。拿到备案回执，才能去公安机关刻业主委员会、业主大会印章；刻好之日起<strong>十日内</strong>把印章样式书面报告街道办。之后规约、议事规则修改或者委员更换的，十五日内向原备案机关办理变更备案。</p>
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 逾期备案的后果</div>
+      <p>逾期未备案或逾期未办理变更备案的，由街道办责令限期报送备案并通告全体业主（广州条例第100条）。实务中更有意义的提醒：备案回执是业委会对外开展活动（开户、签合同、打官司）的身份凭证，务必在三十日内拿到手。</p>
+    </div>
+
+    <h2>九、广州特色①：业主决策电子投票，人在外地也能投</h2>
+    <p>广州条例第 31 条：<strong>业主大会应当优先采用本市业主决策电子投票系统进行表决。</strong>配套的《广州市业主决策电子投票规则》（穗建规字〔2023〕14号）把细节都定好了：</p>
+    <ul>
+      <li><strong>免费使用</strong>（第2条），业主在「广州物业管理」公众号绑定身份即可投票</li>
+      <li>投票期限<strong>不少于五日、不超过三十日</strong>，可申请延长但总长不超三十日；系统故障时间不计入投票期限（第14条）</li>
+      <li>投票组织者应当于电子投票开始<strong>三十日前</strong>公示议题、投票时间、业主清册，公示不少于十五日，并提前书面告知街道办（第15、16条）</li>
+      <li>同一专有部分多名业主绑定的，<strong>以第一个投票业主的意见为准</strong>（第20条）</li>
+      <li>无法使用电子投票的业主，可委托居委会或代理人投票，<strong>截止前3日</strong>提交书面委托书；既委托又电子投票的，以电子投票为准（第21条）</li>
+      <li>系统自动统计、自动生成表决汇总和明细，在服务平台公示<strong>十五日</strong>，明细精确到房号（第23、24条）</li>
+      <li>未投票业主的投票权数不得计入已表决票（第22条）</li>
+    </ul>
+    <div class="tip-box">
+      <div class="tip-box-title">📋 电子投票防「绑了又被劝退」</div>
+      <p>实务里有个真实教训：业主绑定电子投票后、投票前可以解绑，个别物业在投票期间入户游说业主解绑、不投，导致参与率跌破双 2/3。业主方要盯住绑定率和投票率的变化，发现异常及时向街道办反映（相关经验见珠三角业委会成立实务笔记，无案号）。记住：<strong>绑定不等于投票，投了才算数。</strong></p>
+    </div>
+
+    <h2>十、广州特色②：物管会兜底 + 街道/居委的角色</h2>
+    <p>没有业委会时，物管会不是摆设。广州条例第 48 条给它定了四项职责：</p>
+    <ul>
+      <li>负责筹备成立业主委员会</li>
+      <li>组织换届选举业主委员会</li>
+      <li>组织召开业主大会会议</li>
+      <li>根据业主大会的决议、决定，办理物业管理相关事务</li>
+    </ul>
+    <p>也就是说，<strong>在业委会成立前，物管会可以组织召开业主大会，把选聘、解聘物业等业主共同决定事项的程序跑起来</strong>——这就是广州「物管会制度」被评价为珠三角最成熟的原因：它给了业主一条不依赖业委会的通道。业委会选举产生后，物管会停止履职，十日内移交解散（第47条第二款）。</p>
+    <p>街道、居委在整条链里的角色：街道办负责组织成立物管会、指导协助业主大会、处理表决异议、发出备案回执；居委会有时直接组织召开业主大会（条例第25条列了居委组织开会的五种情形，比如业委会被罢免、人数不足、逾期不召开等）。业主和这两个部门打交道，姿态是「依法申请、留痕推进」，不是对抗。</p>
+
+    <h2>十一、物业阻挠、开发商不配合，怎么破</h2>
+    <p>广州条例第 46 条写得很硬：<strong>任何单位或者个人不得阻挠业主依法召开业主大会会议或者成立业主委员会。</strong>配套手段：</p>
+    <ul>
+      <li><strong>协助义务</strong>：建设单位、物业服务人应当协助召开业主大会会议，提供人力、场地支持（第26条）</li>
+      <li><strong>开发商罚则</strong>：建设单位不按规定移交筹备所需资料的，责令限期改正，逾期仍不移交的通报并处以一万元以上十万元以下罚款（第102条）</li>
+      <li><strong>街道不作为的责任</strong>：街道、镇不依法履职的，由上级主管机关或监察机关责令改正、通报批评、依法处分（第99条）</li>
+      <li><strong>清册查询权</strong>：不靠物业给名单，直接向区住建申请免费查业主清册（第26条）</li>
+    </ul>
+    <div class="tip-box">
+      <div class="tip-box-title">📋 业主方的实操顺序</div>
+      <p>被阻挠时按这个顺序走：① 全程留痕（录音、拍照、书面函件）；② 向街道办书面投诉并索要书面回复；③ 向区房屋行政主管部门投诉（物业不配合、开发商不移交资料都有对应罚则）；④ 同步向 12345 反映，留工单号；⑤ 街道不作为的，可依法申请行政复议或提起行政诉讼（本文仅作路径提示，具体个案请咨询律师）。</p>
+    </div>
+
+    <h2>十二、要花多少钱、大概多久</h2>
+    <p><strong>费用：</strong>电子投票系统免费；业主大会会议、业委会办公经费可以从共有资金中列支（办公经费、委员补贴、专职人员薪酬、开会费用，广州条例第96条）。业主实际要出的硬性费用很少，大头通常是请律师做程序顾问、起草文件、应对阻挠的律师费——通常业主分摊或从共有资金列支。凡是打着「代办成立业委会」旗号收高额费用的，警惕。</p>
+    <p><strong>时长：</strong>给一个正常进度参考——10% 联名申请 → 街道办 6 个月内组织物管会 → 物管会筹备（公示、确认清册、起草文件）通常 2-4 个月 → 首次业主大会（公示 30 日前 + 投票 5-30 日 + 结果公示 15 日）约 2-3 个月 → 备案 30 日内、回执 5 个工作日。顺利的话大半年，遇到阻挠或异议，一年以上很正常。<strong>时间拖得越长越要盯紧各环节的法定时限，每拖一步都有人受益。</strong></p>
+
+    <h2>十三、业主最关心的十个问题</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">广州成立业委会要多少业主同意？</div>
+        <div class="faq-a">分两步：第一步申请门槛，占业主总人数 10% 以上的业主联名申请，街道办应当在收到申请之日起六个月内组织成立物管会（广州条例第47条）。第二步首次业主大会表决：面积、人数双 2/3 业主参与表决，参与表决者里面积、人数双过半数同意，规约、议事规则通过、委员当选（民法典第278条、广州条例第22条）。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">开发商和物业不配合，业委会还能成立吗？</div>
+        <div class="faq-a">能。建设单位和物业有法定协助义务（广州条例第26条）；开发商不移交资料可被责令改正并罚款（第102条）；物管会由街道办组织成立，不依赖开发商配合；业主还可直接向区住建申请免费查询业主清册（第26条）。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">筹备组怎么组成、谁说了算？广州还能走筹备组吗？</div>
+        <div class="faq-a">能。两条路：① 走筹备组（广东省物业管理条例）：业主联名申请后，由街道组织成立业主大会筹备组，筹备组组织首次业主大会；② 走物委会（广州条例第47条）：向街道申请成立物业管理委员会，由物委会承担筹备职能（主任由街道（镇）代表担任，广州条例第49条；业主代表名额要主动争取，名单公示十五日可提异议）。2026年5月广州市住建局官方答复明确：物委会是补充性制度、并非前置环节，两条路业主都可以选。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">业主大会怎么开才算数？</div>
+        <div class="faq-a">四道程序缺一不可：① 开会前三十日公示、公示期不少于十五日（第27条）；② 面积、人数双 2/3 参与表决（第22条）；③ 普通事项参与表决者双过半同意、重大事项双四分之三（第22条）；④ 表决结果七日内公示、公示期满无异议生效（第33条）。未投票业主的投票权数不计入已表决票。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">人在外地怎么投票？电子投票怎么用？</div>
+        <div class="faq-a">广州业主大会应当优先采用电子投票（第31条）：业主在「广州物业管理」公众号绑定身份后线上投票，投票期 5-30 日，人在外地完全能投。实在无法电子投票的，可委托居委会或代理人投票，截止前 3 日交书面委托书（电子投票规则第21条）。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">备案要交什么材料、多久办好？</div>
+        <div class="faq-a">选举产生之日起三十日内向街道办备案，交四类材料：议事规则、管理规约；表决结果明细表和汇总表；业主大会会议决定；委员和候补委员基本情况。材料齐全五个工作日内发备案回执（广州条例第39条），凭回执刻章，刻好十日内报告印章样式。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">成立业委会要花多少钱？</div>
+        <div class="faq-a">正常路径硬性费用很少：电子投票免费（电子投票规则第2条），业主大会和业委会办公经费可从共有资金列支（广州条例第96条）。主要开支是请律师做程序顾问和起草文件的费用，通常业主分摊或从共有资金列支。警惕「高价代办成立业委会」。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">物业阻挠成立业委会怎么办？</div>
+        <div class="faq-a">任何单位和个人不得阻挠（广州条例第46条）。留痕 → 向街道办书面投诉 → 向区住建投诉（物业不配合、开发商不移交资料有对应罚则）→ 12345 留工单 → 街道不作为可走复议、诉讼。广州物管会由街道牵头成立，本身就是绕开物业阻挠的制度设计。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">没有业委会时，物管会能干什么？</div>
+        <div class="faq-a">物管会负责筹备成立业委会、组织换届选举、组织召开业主大会、根据业主大会决议办理物业管理事务（广州条例第48条）。也就是说业委会成立前，物管会就能组织业主大会表决选聘解聘物业等事项；业委会选出后物管会十日内移交解散。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">车位算不算投票权？租客能投票吗？</div>
+        <div class="faq-a">业主人数按专有部分数量算，一个专有部分一人（广州条例第28条）；车位是否计入投票权面积，主要看议事规则如何约定投票权数认定方法。租客不是业主，不能以自己名义投票，但业主可出具书面委托书委托代理人投票（第29条）。</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <div class="article-author">
+      <div class="article-author-info">
+        <h4>吴瑞祥 律师</h4>
+        <p>执业十年，专注业主方物业纠纷：业委会成立与换届、业主大会程序、换物业、公共收益追索、物业费争议、业主撤销权、知情权。曾任物业集团法务，熟悉物业内部运营与诉讼套路。</p>
+        <p>广东观象律师事务所（广州）· 只代理业主、业委会一方<br>执业资格与联系方式详见 <a href="../index.html">个人主页</a></p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      本文基于现行法律法规与公开资料整理，仅供普法参考，不构成个案法律意见。广州条例条文以《广州市物业管理条例》（2024修正）正式文本为准，个案适用请以官方最新文本及具体案情为准。涉及具体纠纷，请携带材料咨询执业律师。
+    </div>
+
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-bottom">© 2026 吴瑞祥律师 · 广东观象律师事务所</div>
+    <div class="footer-links">
+      <a href="../index.html">首页</a>
+      <a href="../blog.html">文章</a>
+      <a href="../cases.html">案例</a>
+      <a href="../index.html#contact">联系</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll', function () {
+  document.querySelector('.scroll-top').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+</body>
+</html>

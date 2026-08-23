@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--
+核验块（法条三轨验证，2026-08-23）
+法条核验:
+  民法典第278条 | 中华人民共和国民法典（主席令第45号，2021-01-01施行，现行有效） | 北大法宝直连核验（pkulaw chl/aa00daaeb5a4fe4ebdfb） | 2026-08-23
+  民法典第280条 | 中华人民共和国民法典（主席令第45号，同上） | 北大法宝直连核验（同上库） | 2026-08-23
+  建筑物区分所有权解释第12条 | 法释〔2020〕17号（2020修正，2021-01-01施行，现行有效） | 北大法宝直连核验 | 2026-08-23
+  物业管理条例第14条 | 国务院令第698号（2018修订，现行有效） | 北大法宝直连核验 | 2026-08-23
+  物业管理条例第19条 | 国务院令第698号（2018修订，现行有效） | 北大法宝直连核验（2007/2016修订文本一致） | 2026-08-23
+  广州市物业管理条例第27条、第46条 | 广州市第十六届人大常委会公告第42号（2024修正，现行有效） | 北大法宝直连核验 | 2026-08-23
+  广东省物业管理条例第22条 | 广东省第十四届人大常委会公告第13号（2023修正，现行有效） | 北大法宝直连核验 | 2026-08-23
+  业主大会和业主委员会指导规则第22条、第29条 | 建房〔2009〕274号（2010-01-01施行，现行有效） | obsidian wiki 法规页原文区（2026-08-13核验） | 2026-08-23
+  民事诉讼证据规定第95条 | 法释〔2019〕19号（2019修正，原第75条改第95条，现行有效） | 北大法宝直连核验 | 2026-08-23
+案例核验:
+  （2014）穗中法民五终字第239号 | 半山雍景苑业委会决议撤销案（广州中院2014-04-04，撤销决议） | obsidian wiki 案例页（原始判决书PDF） | 2026-08-23
+  (2017)粤01民终3867号 | 润田雅苑业委会选聘物业决议案（广州中院2017-05-18，发回重审） | obsidian wiki 案例页 | 2026-08-23
+  (2023)粤01民终17481号 | 汇美体育花园物业管理区域认定案（广州中院2023-08-29，维持原判） | obsidian wiki 案例页 | 2026-08-23
+  人民法院案例库2023-07-2-046-001（(2020)沪0112民初36110号） | 邹某甲诉业委会多数决不能将违法事项合法化案（上海闵行法院2021-03-22，撤销决定） | obsidian wiki 案例页 + 人民法院案例库 | 2026-08-23
+备注: FAQ「物业费涨价决议被撤销」一问为一般性法理表述（民法典第278条适用），素材中无已核验的该类判例，未引用具体案号。
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业主大会决议什么情况下会被撤销？多少人同意才有效？广州业主必看的效力规则 | 业主方物业纠纷律师吴瑞祥</title>
+<meta name="description" content="业主大会不是多数人说了算。程序违法、计票造假、漏算面积、内容违法，决议都可能被法院撤销。本文结合民法典第278条、第280条、1年除斥期间及广州中院(2017)粤01民终3867号等真实判例，讲清业主大会决议效力的审查主线与业主撤销权的行使要点。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "业委会私下签字能算业主大会决议吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不算。表决意见应当由业主本人签名（《业主大会和业主委员会指导规则》第22条），选票是证明表决真实性的核心证据。广州中院(2017)粤01民终3867号明确：业委会单方打印、没有业主亲笔签名的统计表，不足以证明表决合法，法院必须审查业主亲笔签名的实际选票。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "业主大会多少人同意才算有效？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "分两步看。第一步参与门槛：应当由专有部分面积占比三分之二以上的业主且人数占比三分之二以上的业主参与表决（民法典第278条）。第二步同意比例：筹集维修资金、改建重建、改变共有部分用途等事项，须经参与表决面积四分之三以上且参与表决人数四分之三以上同意；其他事项（如选聘物业、制定规约）经参与表决面积过半数且参与表决人数过半数同意。注意：比例基数是被排除后实际参与表决的业主，而不是全体业主。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "没收到通知的业主能推翻决议吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。召开业主大会会议应当于会议召开15日以前通知全体业主（《物业管理条例》第14条）；广州更严，《广州市物业管理条例》第27条要求会议召开30日前公示、公示期不少于15日。未提前通知即剥夺了业主的知情权与表决权，属于程序违法。半山雍景苑案（(2014)穗中法民五终字第239号）中，业委会未举证已提前15日通知全体业主，法院认定程序违法，决议被撤销。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "撤销业主大会决议，要多久内起诉？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "知道或者应当知道作出决定之日起一年内（《最高人民法院关于审理建筑物区分所有权纠纷案件适用法律若干问题的解释》第12条）。这是除斥期间，不适用诉讼时效的中止、中断、延长，超过一年撤销权消灭。实务中建议尽早固定异议证据、尽快起诉，别等到决议已经执行到位再主张。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "物业费涨价决议被撤销的案例？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "物业费涨价属于业主共同决定事项，须按民法典第278条规定的程序与比例表决；如果涨价决议在通知、公示、计票或表决比例上违法，业主同样可以依据民法典第280条请求撤销。其审查逻辑与选聘物业等决议一致：程序合法+比例达标是决议效力的两条底线。具体案件请以个案裁判为准，涉及纠纷建议携带材料咨询律师。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "多数决能不能把违法的事合法化？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不能。人民法院案例库2023-07-2-046-001号案确立：在表决事项已明确违反法律法规的情况下，即使业主大会以人数80.2%、面积81.0%的高票通过，少数业主仍有权通过撤销权对抗多数决。业主自治权的边界以符合法律法规范围为限，多数人不得通过表决剥夺少数业主受法律保护的合法权益，行政机关已认定违法的事项不能靠业主大会表决漂白。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "投了赞成票的业主还能起诉撤销吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一般不能。根据诚实信用与禁止反言原则，表决时投赞成票或未明确表示异议的业主，不享有业主撤销权。但未投票、事后通过投诉、信访、诉讼等方式持续明确表示异议的业主，仍具备撤销权主体资格（人民法院案例库2023-07-2-046-001号）。所以对决议不满，要么当场投反对票并留痕，要么事后持续书面异议，沉默可能让撤销权悄悄溜走。"
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #1a2332;
+  --color-secondary: #c9a86c;
+  --color-accent: #2c3e50;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-bg: #f8f9fa;
+  --color-white: #fff;
+  --color-border: #e0e0e0;
+  --color-warn: #8c5a1e;
+  --color-warn-bg: #fdf6ec;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.3s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8; background: var(--color-white); }
+
+/* Navigation */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); transition: var(--transition); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-logo::before { content: ''; width: 32px; height: 3px; background: var(--color-secondary); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--color-text); font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; transition: var(--transition); }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-secondary); transition: width var(--transition); }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--color-primary); }
+.nav-links a.active::after { width: 100%; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--color-primary); transition: var(--transition); }
+
+/* Hero */
+.article-hero { padding: 130px 24px 56px; background: linear-gradient(135deg, #1a2332 0%, #0f1621 100%); color: var(--color-white); position: relative; overflow: hidden; }
+.article-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: var(--color-secondary); opacity: 0.04; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); }
+.article-hero::after { content: '业主决议'; position: absolute; right: -20px; bottom: -40px; font-family: var(--font-serif); font-size: 9rem; font-weight: 700; color: rgba(255,255,255,0.05); }
+.article-hero-container { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+.article-hero-tag { display: inline-block; padding: 5px 14px; border-radius: 4px; background: rgba(201,168,108,0.15); color: var(--color-secondary); font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 22px; }
+.article-hero h1 { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; line-height: 1.45; margin-bottom: 18px; }
+.article-hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.72); max-width: 720px; line-height: 1.9; }
+.article-hero-meta { margin-top: 26px; display: flex; align-items: center; gap: 16px; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+/* Stats band */
+.stats-band { max-width: 860px; margin: -34px auto 0; padding: 0 24px; position: relative; z-index: 2; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #e4dccb; border: 1px solid #e4dccb; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+.stat-item { background: var(--color-white); padding: 22px 16px; text-align: center; }
+.stat-num { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--color-secondary); display: block; line-height: 1.3; }
+.stat-label { font-size: 0.8rem; color: var(--color-text-light); margin-top: 4px; display: block; }
+
+/* Article body */
+.article-body { max-width: 860px; margin: 0 auto; padding: 56px 24px 20px; }
+.article-content h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-primary); margin: 52px 0 20px; padding-left: 16px; border-left: 4px solid var(--color-secondary); line-height: 1.5; }
+.article-content h3 { font-size: 1.12rem; color: var(--color-primary); margin: 28px 0 12px; }
+.article-content p { margin-bottom: 18px; color: var(--color-text); }
+.article-content strong { color: var(--color-primary); font-weight: 600; }
+.article-content ul { margin: 0 0 20px 0; padding-left: 0; list-style: none; }
+.article-content li { margin-bottom: 10px; padding-left: 22px; position: relative; color: var(--color-text); }
+.article-content li::before { content: '◆'; position: absolute; left: 0; top: 0; color: var(--color-secondary); font-size: 0.7rem; }
+.article-content blockquote { margin: 20px 0; padding: 16px 22px; background: var(--color-bg); border-left: 4px solid var(--color-secondary); border-radius: 0 8px 8px 0; color: var(--color-text); font-size: 0.95rem; }
+.article-content .law-quote { background: #faf7f0; border-left: 4px solid #c9a86c; padding: 16px 22px; border-radius: 0 8px 8px 0; margin: 20px 0; font-family: var(--font-serif); color: var(--color-accent); font-size: 0.95rem; }
+.article-content .law-quote .law-title { font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 6px; }
+
+/* Tip box */
+.tip-box { background: #eef3f8; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+.tip-box-title { font-weight: 700; color: var(--color-accent); margin-bottom: 8px; font-size: 0.95rem; }
+.tip-box p { margin: 0; font-size: 0.95rem; }
+
+/* Warn box */
+.warn-box { background: var(--color-warn-bg); border-left: 4px solid var(--color-warn); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+.warn-box-title { font-weight: 700; color: var(--color-warn); margin-bottom: 8px; font-size: 0.95rem; }
+.warn-box p { margin: 0; font-size: 0.95rem; color: var(--color-text); }
+
+/* Case cards */
+.case-card { background: linear-gradient(135deg, #1a2332 0%, #26313f 100%); background-color: #1a2332; border-radius: 12px; padding: 26px 28px; margin: 22px 0; color: #ffffff; position: relative; overflow: hidden; }
+.case-card::after { content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: var(--color-secondary); opacity: 0.06; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); }
+.case-card-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+.case-amount { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 700; color: var(--color-secondary); }
+.case-name { font-size: 1.1rem; font-weight: 700; color: #ffffff; }
+.case-meta { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+.case-card p { color: #ffffff; font-size: 1rem; margin-bottom: 10px; }
+.case-difficulty { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.92rem; color: #ffffff; }
+.case-difficulty strong { color: #c9a86c; }
+
+/* Steps */
+.steps { margin: 24px 0; }
+.step { display: flex; gap: 18px; margin-bottom: 20px; }
+.step-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary); color: var(--color-secondary); font-family: var(--font-serif); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 1.05rem; }
+.step-body h4 { font-size: 1.05rem; color: var(--color-primary); margin-bottom: 6px; }
+.step-body p { margin-bottom: 8px; }
+
+/* FAQ */
+.faq-list { margin: 24px 0; }
+.faq-item { border: 1px solid var(--color-border); border-radius: 10px; padding: 22px 26px; margin-bottom: 16px; background: var(--color-white); transition: box-shadow var(--transition); }
+.faq-item:hover { box-shadow: var(--shadow); }
+.faq-q { font-weight: 700; color: var(--color-primary); font-size: 1.02rem; margin-bottom: 10px; }
+.faq-q::before { content: 'Q'; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--color-secondary); color: var(--color-white); border-radius: 4px; font-size: 0.8rem; margin-right: 10px; }
+.faq-a { font-size: 0.95rem; color: var(--color-text); }
+.faq-a::before { content: 'A'; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--color-accent); color: var(--color-white); border-radius: 4px; font-size: 0.8rem; margin-right: 10px; font-weight: 700; }
+
+/* Author */
+.article-divider { border: none; border-top: 1px solid var(--color-border); margin: 48px 0 24px; }
+.article-author { display: flex; gap: 18px; align-items: center; background: var(--color-bg); border-radius: 12px; padding: 24px 28px; }
+.article-author-info h4 { font-family: var(--font-serif); color: var(--color-primary); margin-bottom: 6px; }
+.article-author-info p { color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.7; }
+.article-author-info a { color: var(--color-secondary); text-decoration: none; }
+.article-author-info a:hover { text-decoration: underline; }
+
+/* Disclaimer */
+.disclaimer { font-size: 0.78rem; color: var(--color-text-light); padding: 20px 24px; background: var(--color-bg); border-radius: 10px; margin: 28px 0; line-height: 1.8; }
+
+/* Footer */
+.footer { background: var(--color-primary); color: rgba(255,255,255,0.6); padding: 40px 24px; margin-top: 40px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-bottom { font-size: 0.85rem; }
+.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; margin-left: 24px; font-size: 0.85rem; }
+.footer-links a:hover { color: var(--color-secondary); }
+
+/* Scroll top */
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary); color: var(--color-white); border: none; font-size: 1.1rem; cursor: pointer; opacity: 0; transition: opacity var(--transition); box-shadow: var(--shadow); z-index: 100; }
+.scroll-top.visible { opacity: 1; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--color-white); flex-direction: column; padding: 20px 24px; gap: 16px; border-bottom: 1px solid var(--color-border); }
+  .nav-links.open { display: flex; }
+  .article-hero h1 { font-size: 1.6rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-amount { font-size: 1.5rem; }
+}
+
+
+/* ===== 深蓝卡文字强制覆盖 v2（2026-08-23 用户确认：白字+金色点缀）===== */
+.case-card { background-color: #1a2332 !important; }
+.case-card, .case-card * { color: #ffffff !important; }
+.case-card .case-name, .case-card .case-amount, .case-card .case-difficulty strong, .case-card h3 { color: #c9a86c !important; font-weight: 700; }
+.case-card .case-meta { color: rgba(255,255,255,0.88) !important; }
+.case-card a { color: #e9dcae !important; text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">吴瑞祥律师</a>
+    <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../blog.html">物业专家解码</a></li>
+      <li><a href="../cases.html">典型案例</a></li>
+      <li><a href="../index.html#about">关于我</a></li>
+      <li><a href="../index.html#areas">执业领域</a></li>
+      <li><a href="../index.html#contact">联系方式</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-container">
+    <span class="article-hero-tag">业主维权 · 业主大会决议效力</span>
+    <h1>业主大会决议什么情况下会被撤销？<br>多少人同意才有效？</h1>
+    <p class="article-hero-desc">业主大会不是「多数人说了算」。程序违法、计票造假、漏算面积、内容违法——已通过的决议照样可能被法院撤销。本文结合真实判例，讲清决议效力的审查主线和业主撤销权的行使要点。</p>
+    <div class="article-hero-meta">
+      <span>吴瑞祥律师 · 业主方物业纠纷</span>
+      <span>·</span>
+      <span>广州 · 观象律师事务所</span>
+      <span>·</span>
+      <span>更新于 2026-08-23</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item"><span class="stat-num">80.2%</span><span class="stat-label">高票通过 决议仍被撤销</span></div>
+    <div class="stat-item"><span class="stat-num">1年</span><span class="stat-label">撤销权 除斥期间</span></div>
+    <div class="stat-item"><span class="stat-num">15日</span><span class="stat-label">全国 会前通知底线</span></div>
+    <div class="stat-item"><span class="stat-num">30日</span><span class="stat-label">广州 会前公示期限</span></div>
+  </div>
+</div>
+
+<article class="article-body">
+  <div class="article-content">
+
+    <p>「我们小区业委会换了物业，但我压根没收到通知，听说票也没过半，这决议算数吗？」「电梯广告收益的使用，业委会几个人签字就定了，能反悔吗？」——这是广州业主问得最多的两类问题。</p>
+    <p>答案是：<strong>决议有没有效力，不是看"谁嗓门大"，而是看法定程序走没走、内容合不合法。</strong>该撤销的决议，法院一样会撤销。本文结合广州本地判例，把「什么情况会被撤销」讲清楚。</p>
+
+    <h2>一、什么情况下业主大会决议会被撤销？两条主线先记住</h2>
+    <p>业主大会、业委会的决定对业主有约束力，但这不是「终审判决」。民法典给了业主一条明确的救济通道：</p>
+    <div class="law-quote">
+      <span class="law-title">《中华人民共和国民法典》第二百八十条</span>
+      「业主大会或者业主委员会的决定，对业主具有法律约束力。业主大会或者业主委员会作出的决定侵害业主合法权益的，受侵害的业主可以请求人民法院予以撤销。」
+    </div>
+    <p>司法实践中，撤销事由基本落在两条主线上：</p>
+    <ul>
+      <li><strong>程序违法</strong>：未提前通知、未公示、漏掉部分业主的投票权、计票造假、表决比例不达标、选票不是业主本人签名。程序是决议效力的「地基」，地基塌了，楼再高也白搭。</li>
+      <li><strong>实体违法</strong>：决议内容本身违反法律、法规的强制性规定——比如把行政机关已认定违法的行为，用业主大会「漂白」。这种决议，票数再多也无效。</li>
+    </ul>
+    <p>下面几条，就是这两条主线在广州的真实打法。</p>
+
+    <h2>二、业委会私下签字、只出统计表，能算业主大会决议吗？</h2>
+    <p>不能。<strong>表决意见应当由业主本人签名</strong>，这是《业主大会和业主委员会指导规则》第 22 条定死的：采用书面征求意见形式的，征求意见书要送每一位业主；凡需投票表决的，表决意见应由业主本人签名。</p>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">无签名</span><span class="case-name">润田雅苑案：单方打印的统计表不算数</span></div>
+      <div class="case-meta">广东省广州市中级人民法院 · (2017)粤01民终3867号 · 业主撤销权纠纷 · 2017-05-18</div>
+      <p>海珠区润田雅苑业委会以「上门征询选聘意见」的方式选聘物业公司，提交的《选聘物业管理企业意见征询表》盖了业委会和业主大会公章，有计票人、监票人、见证人签名，但<strong>没有任何一位业主的亲笔签名</strong>——实质上是业委会单方打印的统计表。一审法院没查明这个关键事实就驳回业主的撤销请求。广州中院明确指出：必须查明是否有业主亲笔签名的实际选票，否则判决程序违法，撤销原判、发回重审。</p>
+      <div class="case-difficulty"><strong>规则：</strong>业主大会表决的证明标准是业主亲笔签名的选票原件，不是业委会盖章的统计汇总表。业委会说「票够了」，就得把选票拿出来。</div>
+    </div>
+    <p>配套的还有一道「撒手锏」：业委会拒不提交选票的，法院可以直接推定业主的主张成立——依据《最高人民法院关于民事诉讼证据的若干规定》第 95 条：一方当事人控制证据无正当理由拒不提交，对待证事实负有举证责任的当事人主张该证据的内容不利于控制人的，法院可以认定该主张成立。</p>
+
+    <h2>三、多少人同意才算有效？「双过半」和「双三分之二」到底怎么算</h2>
+    <p>这是所有决议纠纷的「算术题」，也是最多人算错的地方。民法典第 278 条把规则写得清清楚楚：</p>
+    <div class="law-quote">
+      <span class="law-title">《中华人民共和国民法典》第二百七十八条（节选）</span>
+      「业主共同决定事项，应当由专有部分面积占比三分之二以上的业主且人数占比三分之二以上的业主参与表决。决定前款第六项至第八项规定的事项，应当经参与表决专有部分面积四分之三以上的业主且参与表决人数四分之三以上的业主同意。决定前款其他事项，应当经参与表决专有部分面积过半数的业主且参与表决人数过半数的业主同意。」
+    </div>
+    <p>拆开看，是两步：</p>
+    <ul>
+      <li><strong>第一步·参与门槛</strong>：面积占比 2/3 以上 <strong>且</strong> 人数占比 2/3 以上的业主参与表决——参与的人不够，会都开不成。</li>
+      <li><strong>第二步·同意比例</strong>：筹集维修资金、改建重建建筑物、改变共有部分用途等重大事项，要参与表决面积和人数 <strong>各 3/4 以上</strong> 同意；其他事项（选聘解聘物业、制定修改规约、议事规则等），要参与表决面积和人数 <strong>各过半数</strong> 同意。</li>
+    </ul>
+    <p>两个最容易踩的坑：</p>
+    <p><strong>坑一：比例基数是「参与表决的业主」，不是全体业主。</strong>民法典把旧《物权法》「全体业主双 2/3」改成了「参与表决双 2/3 + 参与表决内过半数/3/4」，门槛实际降低了。但反过来，如果参与率本身不够 2/3，票数再漂亮也白搭。</p>
+    <p><strong>坑二：投票范围不能漏人。</strong>车位、商铺等专有部分的产权人同样享有表决权，漏掉他们，「双过半」的计算基数就错了。</p>
+    <div class="tip-box">
+      <div class="tip-box-title">📌 投票基数还有两处关键口径（广东实务）</div>
+      <p>① <strong>公建配套不计入投票面积</strong>：广州海珠区 2020 年一审行政判决（琉璃律师团队代理）明确——小区幼儿园等公建配套设施即便办了产权证，<strong>也不能计入投票权数和投票面积</strong>，住建局、街道"有产权即计入投票面积"的观点不被法院采纳，据此作出的撤销业主大会决定被一并撤销。</p>
+      <p>② <strong>"从众原则"存在口径分歧</strong>：广东省高院 2021 年提审惠州某小区案时采纳"从众原则"（未投票业主按已表决多数意见计入，两审法院未查明适用从众后是否达双过半即否定授权，属认定事实不清）；而东莞浪琴花园案（见上）则反对把未表态业主强制计入多数票。投票怎么计，起诉前先确认受理法院口径。</p>
+    </div>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">1038㎡</span><span class="case-name">半山雍景苑案：漏掉车位商铺业主，决议被撤销</span></div>
+      <div class="case-meta">广州市中级人民法院 · （2014）穗中法民五终字第239号 · 业主撤销权纠纷 · 2014-04-04</div>
+      <p>天河区半山雍景苑业委会决定不与原物业续约、选聘新物业，自称回收选票 589 张、同意 415 张（占 56%），达到「双过半」。但表决时只向 1-9 栋住宅业主发放选票，<strong>把商业部分和地下车位等专有部分业主排除在外</strong>——开发商珠江房产拥有 1038.45㎡ 专有物业，连投票通知都没收到。更关键的是，业委会始终拒绝提交选票原件供核对，理由是「保护业主隐私」。广州中院认定：业委会对决议合法性负举证责任，拒不提交选票应承担不利后果；排除专有部分业主表决权、未举证 15 日前通知，程序违法，<strong>决议被撤销</strong>。</p>
+      <div class="case-difficulty"><strong>规则：</strong>「保护隐私」不是拒绝交选票的理由；车位、商铺业主必须纳入投票范围；业委会对「双过半」负完整举证责任。</div>
+    </div>
+    <p>还有一个前置问题：<strong>谁是这个小区的人？</strong>物业管理区域的划定直接决定哪些业主有表决权。(2023)粤01民终17481号（增城汇美体育花园案）明确：物业管理区域范围以主管部门备案为准，规划图中的建筑红线、人行道边线不等于物业管理区域的法定界线，建设单位以「备案时未征询其意见」为由主张备案错误，法院不予支持。表决范围从备案区域来，业委会想「划小地盘、好凑票数」，此路不通。</p>
+
+    <h2>四、没收到通知的业主，能推翻决议吗？</h2>
+    <p>能。<strong>通知是程序正义的第一环。</strong>业主连会议都不知道，谈何行使表决权？</p>
+    <div class="law-quote">
+      <span class="law-title">《物业管理条例》第十四条</span>
+      「召开业主大会会议，应当于会议召开15日以前通知全体业主。住宅小区的业主大会会议，应当同时告知相关的居民委员会。」
+    </div>
+    <p>广州的规定更严。依据《广州市物业管理条例》第 27 条：</p>
+    <ul>
+      <li>业主大会会议组织者应当于会议召开 <strong>30 日前</strong> 将会议时间、地点、形式、议题、议程、表决规则等事项向全体业主公示，<strong>公示期不少于 15 日</strong>；</li>
+      <li>公示期间要听取业主意见，业主对公示事项有异议的，会议组织者应自收到异议之日起 <strong>5 日内</strong>处理并答复；</li>
+      <li>公示事项违反法律法规的，镇人民政府、街道办事处应责令限期改正，<strong>未经改正不得召开业主大会会议</strong>。</li>
+    </ul>
+    <p>半山雍景苑案里，业委会没能举证「已提前 15 日通知全体业主」，这成为决议被撤销的理由之一。所以：<strong>没收到通知不是你的问题，是组织者的程序硬伤，可以作为撤销决议的事由。</strong></p>
+    <div class="tip-box">
+      <div class="tip-box-title">📋 广州业主的「程序三查」</div>
+      <p><strong>查公示：</strong>有没有提前 30 日公示、公示满 15 日？<br>
+      <strong>查送达：</strong>通知有没有送达到每一位业主（书面、电子、公告）？<br>
+      <strong>查异议：</strong>公示期间你提的书面异议，有没有被 5 日内答复处理？</p>
+    </div>
+
+    <h2>五、撤销决议，要多久内起诉？1年除斥期间，错过就没了</h2>
+    <p>撤销权不是无限期挂在手上的。<strong>它有一年期限，而且是除斥期间。</strong></p>
+    <div class="law-quote">
+      <span class="law-title">《最高人民法院关于审理建筑物区分所有权纠纷案件适用法律若干问题的解释》第十二条</span>
+      「业主以业主大会或者业主委员会作出的决定侵害其合法权益或者违反了法律规定的程序为由，依据民法典第二百八十条第二款的规定请求人民法院撤销该决定的，应当在知道或者应当知道业主大会或者业主委员会作出决定之日起一年内行使。」
+    </div>
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 这一年，不是诉讼时效</div>
+      <p>除斥期间与诉讼时效不同：<strong>不适用中止、中断、延长。</strong>它不是「三年时效、可催告中断」，而是从知道或应当知道决议之日起，满一年权利就消灭。实践中常见两种死法：一是根本不知道决议、等发现时已过一年；二是知道了但观望、想先谈判，谈崩了再起诉已经超期。所以：<strong>发现决议有问题的第一时间固定证据、尽快起诉，别把撤销权谈没了。</strong></p>
+    </div>
+
+    <h2>六、「多数决」能不能把违法的事合法化？</h2>
+    <p>这是业主自治最重要的一条边界：<strong>不能。</strong>人数再多、面积再大，也绕不过法律。</p>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">80.2%</span><span class="case-name">邹某甲案：高票通过，照样撤销</span></div>
+      <div class="case-meta">人民法院案例库 2023-07-2-046-001 · 上海市闵行区人民法院 (2020)沪0112民初36110号 · 2021-03-22</div>
+      <p>某小区业主大会决定在某楼栋西侧设建筑垃圾堆放点，同意票人数 564 人（80.2%）、面积 60077㎡（81.0%），远超双 2/3 门槛。但镇政府已先行认定该堆放点占用绿化、违反《上海市绿化条例》，责令恢复原样。法院认为：<strong>在表决事项已明确违法的情况下，即使出现「多数决」，少数业主仍有权通过业主撤销权对抗</strong>——业主自治权的边界以符合法律法规范围为限，多数人不得通过表决剥夺少数业主受法律保护的合法权益。另外，本次计票发放 703 票却统计出 709 票，存在 6 票误差且复核后未纠正，法院认定计票程序存在明显问题，决定不符合法定程序。<strong>决定被撤销。</strong></p>
+      <div class="case-difficulty"><strong>规则：</strong>① 实体合法性优先于程序多数决；② 行政机关已认定违法的事项，不能靠业主大会表决「漂白」；③ 计票误差即使不影响结果，也构成程序瑕疵。</div>
+    </div>
+    <p>这条规则同样在行政层面有配套：《广州市物业管理条例》第 46 条规定，业主大会、业委会作出的决定违反法律、法规的，镇人民政府、街道办事处应当<strong>责令限期改正或者撤销其决定</strong>，并通告全体业主。业主个人走法院撤销（1 年除斥期间），同时也可以向镇街投诉要求行政撤销——两条腿走路。</p>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">东莞</span><span class="case-name">浪琴花园案：业委会私签物业合同，业主撤销成功</span></div>
+      <div class="case-meta">(2016)粤19民终8680号 · 东莞市中级人民法院 · 二审维持</div>
+      <p>东莞浪琴花园业委会未召开业主大会，仅凭《管理规约》里"无法召开业主大会时当然授权业委会选聘物业"的条款，就与物业公司签了《物业服务合同》。业主起诉撤销。两级法院都支持：<strong>选聘物业属于业主共同决定事项（民法典278条第4项），须经专有部分面积和人数"双过半"同意；管理规约不得违反法律强制性规定</strong>，"当然授权"条款无效；业委会未经业主大会表决签约，侵害业主选择物业服务企业的合法权益，<strong>合同被撤销</strong>。业主在知道决议之日起1年内起诉（最高法解释第12条），未超期。</p>
+      <div class="case-difficulty"><strong>规则：</strong>① 规约不能架空法定的业主共同决定权——"当然授权"条款无效；② 业委会擅自签约，业主个人可诉撤销，且能约束全体业主；③ 这是广东本地（东莞）生效判例，广东省内直接可援引。</div>
+    </div>
+
+    <h2>七、决议被撤销了，然后呢？业主怎么用好撤销权</h2>
+    <p>想把一份有问题的决议拉下来，光生气没用，按下面三步走：</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>留痕：把你的反对说出来、写下来</h4>
+          <p>邹某甲案确立的规则：表决时<strong>投赞成票或未明确表示异议的业主，不享有撤销权</strong>；但没投票、事后通过投诉、信访、诉讼等持续明确表示异议的业主，仍具备撤销权主体资格。所以对决议不满，当场投反对票并拍照留痕，或事后书面投诉——沉默，可能让撤销权悄悄溜走。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>取证：锁定程序硬伤</h4>
+          <p>围绕三条线收证据：<strong>通知公示线</strong>（会议通知、公示照片、送达记录——没公示满 15 日/30 日就是硬伤）；<strong>投票线</strong>（要求业委会出示业主亲笔签名选票原件，拒不提供的援引证据规定第 95 条）；<strong>比例线</strong>（面积清册、业主名册，核对有没有漏掉车位、商铺业主，票数有没有造假）。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>起诉：一年内，两条腿走路</h4>
+          <p>在知道或应当知道决议之日起 <strong>1 年内</strong>向法院提起业主撤销权之诉（除斥期间不中止不中断）；同步向镇人民政府、街道办事处投诉，依据《广州市物业管理条例》第 46 条请求责令改正或撤销并通告全体业主。行政投诉不占起诉时间，但<strong>别等行政结果，起诉期限不等人</strong>。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 三个「别」</div>
+      <p><strong>别只靠嘴说：</strong>撤销权诉讼要证据，投诉、信访、书面异议都要留痕。<br>
+      <strong>别超过一年：</strong>除斥期间过了就过了，法院不会因为「情有可原」给你续期。<br>
+      <strong>别单打独斗硬扛程序：</strong>决议撤销涉及通知、计票、比例、区域认定多个环节，每个环节都有一套举证规则，专业律师能帮你把「感觉不对」变成「程序违法」。</p>
+    </div>
+
+    <h2>八、业主最关心的七个问题</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">业委会私下签字能算业主大会决议吗？</div>
+        <div class="faq-a">不算。表决意见应当由业主本人签名（《业主大会和业主委员会指导规则》第 22 条）。广州中院 (2017)粤01民终3867号 明确：没有业主亲笔签名、只有业委会单方打印的统计表，不足以证明表决合法，法院必须审查实际选票。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">业主大会多少人同意才算有效？</div>
+        <div class="faq-a">两步：① 参与门槛——面积占比 2/3 以上且人数占比 2/3 以上业主参与表决（民法典第 278 条）；② 同意比例——筹集维修资金、改建重建、改变共有部分用途等事项要参与表决的面积、人数各 3/4 以上同意，其他事项（选聘物业、制定规约等）各过半数同意。基数是参与表决的业主，不是全体业主。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">没收到通知的业主能推翻决议吗？</div>
+        <div class="faq-a">能。全国规定会前 15 日通知全体业主（《物业管理条例》第 14 条）；广州更严，会前 30 日公示、公示期不少于 15 日，异议 5 日内处理，未经改正不得开会（《广州市物业管理条例》第 27 条）。未通知即表决，程序违法，半山雍景苑案（(2014)穗中法民五终字第239号）就是这么撤销的。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">撤销业主大会决议，要多久内起诉？</div>
+        <div class="faq-a">知道或应当知道作出决定之日起一年内（建筑物区分所有权解释第 12 条）。这是除斥期间，不适用中止、中断、延长，超期撤销权消灭。发现决议有问题，第一时间固定证据起诉。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">物业费涨价决议被撤销的案例？</div>
+        <div class="faq-a">物业费涨价属于业主共同决定事项，须按民法典第 278 条规定的程序与比例表决；涨价决议在通知、公示、计票或比例上违法，业主同样可依民法典第 280 条请求撤销，审查逻辑与选聘物业等决议一致。具体案件以个案裁判为准，涉及纠纷建议携带材料咨询律师。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">多数决能不能把违法的事合法化？</div>
+        <div class="faq-a">不能。人民法院案例库 2023-07-2-046-001 号案：表决事项已明确违法时，即使人数 80.2%、面积 81.0% 高票通过，少数业主仍可撤销。业主自治的边界以符合法律法规为限，行政机关已认定违法的事项，不能靠表决漂白。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">投了赞成票的业主还能起诉撤销吗？</div>
+        <div class="faq-a">一般不能。投赞成票或未明确异议的业主不享有撤销权（诚实信用、禁止反言原则）；但没投票、事后通过投诉、信访、诉讼持续明确异议的业主，仍具备撤销权主体资格。对决议不满，当场反对并留痕最稳。</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <div class="article-author">
+      <div class="article-author-info">
+        <h4>吴瑞祥 律师</h4>
+        <p>执业十年，专注业主方物业纠纷：业主撤销权、业主大会决议效力、公共收益追索、物业费争议、业委会换届、换物业、知情权。曾在物业集团法务部任职，物业的套路我最懂，帮你拆招。</p>
+        <p>广东观象律师事务所（广州）· 只代理业主、业委会一方<br>执业资格与联系方式详见 <a href="../index.html">个人主页</a></p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      本文基于公开裁判文书与现行法律法规整理，仅供普法参考，不构成个案法律意见。案号、金额以法院最终生效文书为准。涉及具体纠纷，请携带材料咨询执业律师。
+    </div>
+
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-bottom">© 2026 吴瑞祥律师 · 广东观象律师事务所</div>
+    <div class="footer-links">
+      <a href="../index.html">首页</a>
+      <a href="../blog.html">文章</a>
+      <a href="../cases.html">案例</a>
+      <a href="../index.html#contact">联系</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll', function () {
+  document.querySelector('.scroll-top').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+</body>
+</html>

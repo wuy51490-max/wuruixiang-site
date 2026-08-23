@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!--
+核验块（法条三轨验证，2026-08-23）
+法条核验:
+  民法典第943条 | 中华人民共和国民法典（中华人民共和国主席令第45号，2021-01-01施行，现行有效） | pkulaw北大法宝 search_article核验（原文一致） | 2026-08-23
+  民法典第282条 | 中华人民共和国民法典（主席令第45号，现行有效） | pkulaw北大法宝 search_article核验（原文一致） | 2026-08-23
+  民法典第283条 | 中华人民共和国民法典（主席令第45号，现行有效） | pkulaw北大法宝 search_article核验（原文一致） | 2026-08-23
+  民法典第278条 | 中华人民共和国民法典（主席令第45号，现行有效） | pkulaw北大法宝 search_article核验（原文一致） | 2026-08-23
+  最高法区分所有权解释第13条 | 最高人民法院关于审理建筑物区分所有权纠纷案件适用法律若干问题的解释（法释〔2020〕17号，2020-12-29，现行有效） | pkulaw北大法宝 search_article核验（原文一致，与法释〔2009〕7号旧版第13条内容相同） | 2026-08-23
+  广州市业主共有资金管理办法 | 穗建规字〔2021〕6号（2021-06-14施行，有效期5年；经穗建规字〔2026〕2号延长有效期，现行有效） | pkulaw北大法宝核验（2026-06-15延长通知原文）+ obsidian wiki 法规页原文区 | 2026-08-23
+案例核验:
+  （2024）粤06民终556号 | 佛山惠景城小区业主诉广东宏德科技物业佛山禅城分公司业主知情权纠纷案，二审维持，支持"倒查14年"（一审（2023）粤0604民初17746号） | obsidian wiki 案例页（佛山中院 2024-03-15 / 佛山日报） | 2026-08-23
+  （2021）沪01民终4922号 | 上海一中院：业主知情权包括查阅权和复制权 | obsidian wiki 案例页（上海一中院 / 北大法宝） | 2026-08-23
+  佛山高明碧桂园知情权案（2025-04-23一审） | 高明区法院判决须提供合同、付款凭证、银行交易明细等原始凭证供查阅复印拍照 | obsidian wiki 裁判口径集（案例四） | 2026-08-23
+  中山中院业主知情权案（2024） | 原始凭证不属必须公开范围（保守口径，具体案号未在素材中，仅表述法院与年份） | obsidian wiki 佛山案关联案例页 | 2026-08-23
+  上海中远两湾城公共收益返还案（4000万）
+  (2025)粤19民终5741号 | 东莞莲花：架空层/管理用房/会所/仓库确权=共有部分（二审维持），先确权后追索两步走 | 用户 raw 库判决书原件 + obsidian 实务指引 | 2026-08-23
+  (2023)粤01民终11683号 | 广州中院：欣茂物业公共收益不得擅自抵扣维修费，停车费/管理费归业主共有 | 用户 raw 库判决书原件（广州中院 2023-07-25） | 2026-08-23 | 上海市普陀区人民法院 2023（案号未在素材中，按公开报道表述） | obsidian wiki MOC-公共收益返还（关联案例页） | 2026-08-23
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业主知情权：物业的账，业主能查到多深？广州业主查账指南 | 业主方物业纠纷律师吴瑞祥</title>
+<meta name="description" content="广州业主查账指南：业主能查物业的哪些账？物业只贴一张收支表算数吗？原始发票、合同、银行流水能查吗？账能倒查几年？本文以民法典第943条、最高法区分所有权解释第13条、《广州市业主共有资金管理办法》（穗建规字〔2021〕6号）为据，结合佛山惠景城倒查14年、上海一中院查阅复制权等真实判例，讲清业主知情权的边界和维权路径。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "业主能查物业的哪些账？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "民法典第943条要求物业服务人定期公开服务事项、收费项目、维修资金使用情况、业主共有部分的经营与收益情况；最高法区分所有权解释第13条进一步列明五类应公开资料，包括维修资金筹集使用情况、物业服务合同、共有部分的使用和收益情况等。广州更细：《广州市业主共有资金管理办法》第22条要求按季度公开共有资金账户、筹集、结余、支付等信息，业主提出异议须7日内书面答复。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "物业只贴个收支表算数吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不算。佛山高明法院2025年判例明确：张贴简单收支情况表不足以满足业主知情权、监督权，物业须提供合同、付款凭证、银行交易明细等原始凭证供查阅、复印、拍照。只有几个汇总数字、没有原始凭证，等于没查。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能查原始发票和合同吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。上海一中院（2021）沪01民终4922号判决确认：业主知情权包括查阅权和复制权，物业须提供服务资金收支账目明细（含汇款凭证、票据）、电梯维护合同、绿化维护合同、清洁保安外包合同、广告合同、场地租赁合同、公共收益收支明细等供业主查阅复制。复制费用由业主自行承担；涉及第三方商业秘密的，可能只提供查阅不公开。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能查几年的账？能倒查多少年？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "佛山惠景城案（（2024）粤06民终556号，二审维持）支持业主倒查14年：物业须提供2009年至2023年共14年的停车收入明细、公共收益会计凭证、物业服务合同、电梯维修合同。业主知情权不受3年诉讼时效限制，可追溯到物业开始管理时。要注意：查账（知情权）和追钱（返还请求权）是两回事，追钱有时效问题，所以先查账最稳。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "物业不给查怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三步走：第一步书面申请，业主或业委会先发函要求提供账目（先请求后诉讼）；第二步行政投诉，向区住建部门、街道办投诉，依据《广州市业主共有资金管理办法》第25条，不公开收支、不答复异议、不配合审计的由区住建部门依法查处；第三步起诉，提起业主知情权纠纷诉讼，单个业主也能起诉，佛山惠景城业委会就是靠3年9场诉讼分步推进拿下的。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "可以委托审计吗？审计费用谁出？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。《广州市业主共有资金管理办法》第23条规定，业主委员会、物业管理委员会或居委会可以聘请专业机构对共有资金收支进行审计，共有资金管理单位应当依法配合，开户银行应予协助。审计费用在共有资金中列支的，须经业主共同决定或业主大会决定。上海中远两湾城追回4000万，靠的就是专业审计把20年账查透。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "没有业委会，单个业主能查吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能。业主知情权是每位业主的法定权利，不依赖业委会。佛山高明碧桂园案就是单个业主苏女士起诉物业，法院支持其查阅2010年至今的原始凭证。物业以"业主未取得全体业主授权"为由拒绝的，法院明确不予支持。不过单个业主起诉要自己承担诉讼成本，人多力量大，有条件还是先推动成立业委会。"
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-primary: #1a2332;
+  --color-secondary: #c9a86c;
+  --color-accent: #2c3e50;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-bg: #f8f9fa;
+  --color-white: #fff;
+  --color-border: #e0e0e0;
+  --color-warn: #8c5a1e;
+  --color-warn-bg: #fdf6ec;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --transition: 0.3s ease;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8; background: var(--color-white); }
+
+/* Navigation */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); transition: var(--transition); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; height: 64px; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--color-primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.nav-logo::before { content: ''; width: 32px; height: 3px; background: var(--color-secondary); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--color-text); font-size: 0.95rem; font-weight: 500; position: relative; padding: 4px 0; transition: var(--transition); }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--color-secondary); transition: width var(--transition); }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--color-primary); }
+.nav-links a.active::after { width: 100%; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.nav-toggle span { width: 24px; height: 2px; background: var(--color-primary); transition: var(--transition); }
+
+/* Hero */
+.article-hero { padding: 130px 24px 56px; background: linear-gradient(135deg, #1a2332 0%, #0f1621 100%); color: var(--color-white); position: relative; overflow: hidden; }
+.article-hero::before { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: var(--color-secondary); opacity: 0.04; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); }
+.article-hero::after { content: '业主知情权'; position: absolute; right: -20px; bottom: -40px; font-family: var(--font-serif); font-size: 8.5rem; font-weight: 700; color: rgba(255,255,255,0.05); white-space: nowrap; }
+.article-hero-container { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+.article-hero-tag { display: inline-block; padding: 5px 14px; border-radius: 4px; background: rgba(201,168,108,0.15); color: var(--color-secondary); font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 22px; }
+.article-hero h1 { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; line-height: 1.45; margin-bottom: 18px; }
+.article-hero-desc { font-size: 1.08rem; color: rgba(255,255,255,0.72); max-width: 720px; line-height: 1.9; }
+.article-hero-meta { margin-top: 26px; display: flex; align-items: center; gap: 16px; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+/* Stats band */
+.stats-band { max-width: 860px; margin: -34px auto 0; padding: 0 24px; position: relative; z-index: 2; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #e4dccb; border: 1px solid #e4dccb; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+.stat-item { background: var(--color-white); padding: 22px 16px; text-align: center; }
+.stat-num { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--color-secondary); display: block; line-height: 1.3; }
+.stat-label { font-size: 0.8rem; color: var(--color-text-light); margin-top: 4px; display: block; }
+
+/* Article body */
+.article-body { max-width: 860px; margin: 0 auto; padding: 56px 24px 20px; }
+.article-content h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-primary); margin: 52px 0 20px; padding-left: 16px; border-left: 4px solid var(--color-secondary); line-height: 1.5; }
+.article-content h3 { font-size: 1.12rem; color: var(--color-primary); margin: 28px 0 12px; }
+.article-content p { margin-bottom: 18px; color: var(--color-text); }
+.article-content strong { color: var(--color-primary); font-weight: 600; }
+.article-content ul { margin: 0 0 20px 0; padding-left: 0; list-style: none; }
+.article-content li { margin-bottom: 10px; padding-left: 22px; position: relative; color: var(--color-text); }
+.article-content li::before { content: '◆'; position: absolute; left: 0; top: 0; color: var(--color-secondary); font-size: 0.7rem; }
+.article-content blockquote { margin: 20px 0; padding: 16px 22px; background: var(--color-bg); border-left: 4px solid var(--color-secondary); border-radius: 0 8px 8px 0; color: var(--color-text); font-size: 0.95rem; }
+.article-content .law-quote { background: #faf7f0; border-left: 4px solid #c9a86c; padding: 16px 22px; border-radius: 0 8px 8px 0; margin: 20px 0; font-family: var(--font-serif); color: var(--color-accent); font-size: 0.95rem; }
+.article-content .law-quote .law-title { font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 6px; }
+
+/* Tip box */
+.tip-box { background: #eef3f8; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+.tip-box-title { font-weight: 700; color: var(--color-accent); margin-bottom: 8px; font-size: 0.95rem; }
+.tip-box p { margin: 0; font-size: 0.95rem; }
+
+/* Warn box */
+.warn-box { background: var(--color-warn-bg); border-left: 4px solid var(--color-warn); border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 24px 0; }
+.warn-box-title { font-weight: 700; color: var(--color-warn); margin-bottom: 8px; font-size: 0.95rem; }
+.warn-box p { margin: 0 0 10px 0; font-size: 0.95rem; color: var(--color-text); }
+.warn-box p:last-child { margin: 0; }
+
+/* Case cards */
+.case-card { background: linear-gradient(135deg, #1a2332 0%, #26313f 100%); background-color: #1a2332; border-radius: 12px; padding: 26px 28px; margin: 22px 0; color: #ffffff; position: relative; overflow: hidden; }
+.case-card::after { content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: var(--color-secondary); opacity: 0.06; clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%); }
+.case-card-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; flex-wrap: wrap; }
+.case-amount { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 700; color: var(--color-secondary); }
+.case-name { font-size: 1.1rem; font-weight: 700; color: #ffffff; }
+.case-meta { font-size: 0.9rem; color: rgba(255,255,255,0.85); margin-bottom: 12px; }
+.case-card p { color: #ffffff; font-size: 1rem; margin-bottom: 10px; }
+.case-difficulty { margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.92rem; color: #ffffff; }
+.case-difficulty strong { color: #c9a86c; }
+
+/* Steps */
+.steps { margin: 24px 0; }
+.step { display: flex; gap: 18px; margin-bottom: 20px; }
+.step-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary); color: var(--color-secondary); font-family: var(--font-serif); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 1.05rem; }
+.step-body h4 { font-size: 1.05rem; color: var(--color-primary); margin-bottom: 6px; }
+.step-body p { margin-bottom: 8px; }
+
+/* FAQ */
+.faq-list { margin: 24px 0; }
+.faq-item { border: 1px solid var(--color-border); border-radius: 10px; padding: 22px 26px; margin-bottom: 16px; background: var(--color-white); transition: box-shadow var(--transition); }
+.faq-item:hover { box-shadow: var(--shadow); }
+.faq-q { font-weight: 700; color: var(--color-primary); font-size: 1.02rem; margin-bottom: 10px; }
+.faq-q::before { content: 'Q'; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--color-secondary); color: var(--color-white); border-radius: 4px; font-size: 0.8rem; margin-right: 10px; }
+.faq-a { font-size: 0.95rem; color: var(--color-text); }
+.faq-a::before { content: 'A'; display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: var(--color-accent); color: var(--color-white); border-radius: 4px; font-size: 0.8rem; margin-right: 10px; font-weight: 700; }
+
+/* Author */
+.article-divider { border: none; border-top: 1px solid var(--color-border); margin: 48px 0 24px; }
+.article-author { display: flex; gap: 18px; align-items: center; background: var(--color-bg); border-radius: 12px; padding: 24px 28px; }
+.article-author-info h4 { font-family: var(--font-serif); color: var(--color-primary); margin-bottom: 6px; }
+.article-author-info p { color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 6px; line-height: 1.7; }
+.article-author-info a { color: var(--color-secondary); text-decoration: none; }
+.article-author-info a:hover { text-decoration: underline; }
+
+/* Disclaimer */
+.disclaimer { font-size: 0.78rem; color: var(--color-text-light); padding: 20px 24px; background: var(--color-bg); border-radius: 10px; margin: 28px 0; line-height: 1.8; }
+
+/* Footer */
+.footer { background: var(--color-primary); color: rgba(255,255,255,0.6); padding: 40px 24px; margin-top: 40px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-bottom { font-size: 0.85rem; }
+.footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; margin-left: 24px; font-size: 0.85rem; }
+.footer-links a:hover { color: var(--color-secondary); }
+
+/* Scroll top */
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary); color: var(--color-white); border: none; font-size: 1.1rem; cursor: pointer; opacity: 0; transition: opacity var(--transition); box-shadow: var(--shadow); z-index: 100; }
+.scroll-top.visible { opacity: 1; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--color-white); flex-direction: column; padding: 20px 24px; gap: 16px; border-bottom: 1px solid var(--color-border); }
+  .nav-links.open { display: flex; }
+  .article-hero h1 { font-size: 1.6rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-amount { font-size: 1.5rem; }
+}
+
+
+/* ===== 深蓝卡文字强制覆盖 v2（2026-08-23 用户确认：白字+金色点缀）===== */
+.case-card { background-color: #1a2332 !important; }
+.case-card, .case-card * { color: #ffffff !important; }
+.case-card .case-name, .case-card .case-amount, .case-card .case-difficulty strong, .case-card h3 { color: #c9a86c !important; font-weight: 700; }
+.case-card .case-meta { color: rgba(255,255,255,0.88) !important; }
+.case-card a { color: #e9dcae !important; text-decoration: underline; }
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">吴瑞祥律师</a>
+    <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../blog.html">物业专家解码</a></li>
+      <li><a href="../index.html#about">关于我</a></li>
+      <li><a href="../index.html#areas">执业领域</a></li>
+      <li><a href="../index.html#honors">专业头衔</a></li>
+      <li><a href="../index.html#contact">联系方式</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="article-hero-container">
+    <span class="article-hero-tag">业主维权 · 业主知情权</span>
+    <h1>物业的账，业主能查到多深？<br>广州业主查账指南：能查什么、能查几年、不给查怎么办</h1>
+    <p class="article-hero-desc">民法典第 943 条要求物业定期公开共有部分经营与收益情况，最高院解释第 13 条列了五类应公开资料，广州还有专门的《业主共有资金管理办法》。佛山已有生效判例支持业主「倒查 14 年」。本文把查账的边界一次讲清。</p>
+    <div class="article-hero-meta">
+      <span>吴瑞祥律师 · 业主方物业纠纷</span>
+      <span>·</span>
+      <span>广州 · 观象律师事务所</span>
+      <span>·</span>
+      <span>更新于 2026-08-23</span>
+    </div>
+  </div>
+</header>
+
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item"><span class="stat-num">14年</span><span class="stat-label">佛山判例 账目可倒查</span></div>
+    <div class="stat-item"><span class="stat-num">5类</span><span class="stat-label">司法解释 应公开资料</span></div>
+    <div class="stat-item"><span class="stat-num">7日</span><span class="stat-label">广州办法 异议答复期限</span></div>
+    <div class="stat-item"><span class="stat-num">4项</span><span class="stat-label">按季公开 共有资金信息</span></div>
+  </div>
+</div>
+
+<article class="article-body">
+  <div class="article-content">
+
+    <p>「我们小区物业贴出来的那张收支表，只有三行字：收入多少、支出多少、结余多少。我问他要明细，他说商业机密；我要发票，他说包干制不用公开；我想多查几年，他说过了时效。」——这是广州业主找我咨询时，最常转述的三句话。</p>
+    <p>这三句话，一句都不成立。先说结论：<strong>业主知情权有完整的法律支撑</strong>——民法典第 943 条要求物业服务人定期公开共有部分经营与收益情况，最高院区分所有权解释第 13 条列了五类应公开的资料，广州还专门出台了《广州市业主共有资金管理办法》。能查什么、能查到多深、能查几年，都有答案。佛山已有生效判例，支持业主「倒查 14 年」。</p>
+
+    <h2>一、业主能查物业的哪些账？</h2>
+    <p>法定层面，能查的账分三层：</p>
+    <ul>
+      <li><strong>民法典第 943 条</strong>：物业服务人应当定期公开服务事项、负责人员、质量要求、收费项目、收费标准、履行情况，以及<strong>维修资金使用情况、业主共有部分的经营与收益情况</strong>，并向业主大会、业主委员会报告。</li>
+      <li><strong>最高法区分所有权解释第 13 条</strong>：业主请求公布、查阅以下资料的，法院应予支持——维修资金筹集使用情况；管理规约、议事规则、业主大会和业委会的决定及会议记录；物业服务合同、共有部分的使用和收益情况；规划车位车库的处分情况；其他应当公开的情况和资料。</li>
+      <li><strong>广州本地</strong>：《广州市业主共有资金管理办法》（穗建规字〔2021〕6号）第 22 条——共有资金管理单位须按季度向全体业主公开四项信息：账户开户银行、账号、名称；筹集、结余情况；支付项目、金额；其他管理情况。业主提出异议，须 <strong>7 日内书面答复</strong>。</li>
+    </ul>
+    <div class="law-quote">
+      <span class="law-title">《中华人民共和国民法典》第九百四十三条</span>
+      「物业服务人应当定期将服务的事项、负责人员、质量要求、收费项目、收费标准、履行情况，以及维修资金使用情况、业主共有部分的经营与收益情况等以合理方式向业主公开并向业主大会、业主委员会报告。」
+    </div>
+    <p>注意区分两类账：<strong>物业费收支</strong>（属于物业经营，包干制下自负盈亏）和<strong>共有部分收益</strong>（停车费、广告费、场地费，属于全体业主）。物业费怎么花不一定全公开，但<strong>公共收益的账，无论什么收费模式都必须公开</strong>——这一点，佛山惠景城案已经钉死。</p>
+
+    <h2>二、物业只贴一张收支表，算公开了吗？</h2>
+    <p>不算。这是业主查账路上第一个坎，也是判例说得最明白的一点：<strong>只有汇总数字、没有原始凭证，等于没查。</strong></p>
+    <p>佛山高明法院 2025 年的判例里，业主苏女士起诉碧桂园生活服务，物业抗辩说「已经公示收支表了」。法院直接认定：<strong>张贴简单收支情况表不足以满足业主知情权、监督权的要求</strong>，判决物业提供 2010 年 10 月 1 日至 2024 年 9 月 30 日期间共有部分使用、收益、支出的合同、付款凭证、银行交易明细等原始凭证及养护记录原件，供业主查阅、复印、拍照。</p>
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 警惕「拆分合同」的隐蔽手法</div>
+      <p>有的物业为了压低账面上的公共收益，把一笔收入拆成两份合同：比如广告费拆成「正常广告合同 2000 元/年 + 另签物业管理合同 8000 元/年」，让公共收益在账上只剩零头。广州黄埔法院 2019 年受理过这类案件，物业公司因此被告上法庭。查账时如果发现同类的合同结构，别放过。</p>
+    </div>
+
+    <h2>三、原始发票、合同、银行流水，能查吗？</h2>
+    <p>能，而且不只是「能看」，是<strong>能查、能复印、能拍照</strong>。这是上海一中院（2021）沪01民终4922号判决确立的口径：</p>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">查阅+复制</span><span class="case-name">上海一中院业主知情权案</span></div>
+      <div class="case-meta">上海市第一中级人民法院 · （2021）沪01民终4922号 · 业主知情权纠纷（二审维持）</div>
+      <p>业主起诉要求物业提供资料供查阅复制，物业抗辩：业主只有查阅权，没有复制权。法院明确：<strong>业主知情权的表现形式包括查阅权和复制权，复制是查阅的合理延伸</strong>。物业须提供：物业服务资金收支账目明细（含汇款凭证、票据）、电梯维护合同、绿化维护合同、清洁外包合同、保安外包合同、广告合同、场地租赁合同、公共收益收支明细、专项维修资金明细。</p>
+      <div class="case-difficulty"><strong>要点：</strong>复制费用由业主自己承担；涉及第三方商业秘密的资料，法院可能不支持公开，但可提供查阅——这是知情权和商业秘密之间的平衡线。</div>
+    </div>
+    <p>要说明的是，<strong>原始凭证该不该公开，各地法院口径并不完全一致</strong>：广东佛山高明碧桂园案（2025）判决支持业主查阅原始凭证；而中山中院 2024 年有判例认为原始凭证不属于必须公开的范围，口径偏保守。同案不同判客观存在，起诉前先摸清受理法院的口径，再决定诉求怎么写。</p>
+
+    <h2>四、账能倒查几年？佛山判例：14 年</h2>
+    <p>这是业主问得最多的问题，答案也最让人意外——<strong>业主知情权不受 3 年诉讼时效限制</strong>，可以追溯到物业开始管理那天。</p>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">14年</span><span class="case-name">佛山惠景城「倒查14年」案</span></div>
+      <div class="case-meta">佛山市中级人民法院 · （2024）粤06民终556号（二审维持，2024-03-15）· 业主知情权纠纷</div>
+      <p>惠景城小区由宏德科技物业实行「包干制」管理。业主提出要查 2009 年 9 月至 2023 年 8 月共 14 年的停车经营收入明细账目、公共收益财务会计凭证、物业服务合同、电梯维修合同。物业以「包干制＝自负盈亏，不须公开详细账目」拒绝。业主 3 年内打了 9 场诉讼。法院认定：<strong>包干制仅决定物业费盈亏归属，不影响业主对公共收益的知情权；知情权追溯不受短期时效限制</strong>，物业须交出 14 年完整资料。佛山中院二审维持原判。</p>
+      <div class="case-difficulty"><strong>难度点：</strong>3 年 9 场诉讼，需要业委会有持续的法律投入。打法分步推进：先确认知情权范围，再追索公共收益，逐步扩大战果。</div>
+    </div>
+    <div class="warn-box">
+      <div class="warn-box-title">⚠️ 查账和追钱是两回事</div>
+      <p><strong>查账（知情权）不受 3 年时效限制，但追钱（返还请求权）有时效问题。</strong>正确姿势是：先打知情权把账查透，账查清楚了，再谈追索。上海中远两湾城追回 4000 万公共收益（上海市普陀区法院 2023 年判决），起点也是先查透 20 年的账。账在手里，主动权就在业主手里。</p>
+    </div>
+
+    <h2>五、物业不给查，怎么办？</h2>
+    <p>三条路，按顺序走，不要一上来就起诉：</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>书面申请：先礼后兵</h4>
+          <p>以业主或业委会名义发函，列明要查的资料清单（账目、凭证、合同、流水），要求限期提供。先请求、后诉讼，既是程序要求，也留下证据——物业拒不理睬的书面痕迹，就是日后起诉的底气。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>行政投诉：让监管部门施压</h4>
+          <p>向区住建部门、街道办投诉。《广州市业主共有资金管理办法》第 25 条规定：不按规定公开收支、不答复异议、不配合审计的，由<strong>区住房建设行政主管部门依法查处</strong>。行政压力有时比诉讼来得快。</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>起诉：知情权纠纷</h4>
+          <p>提起业主知情权纠纷诉讼，诉请判令物业提供特定期间的资料供查阅、复制。单个业主也能起诉——高明碧桂园案就是业主个人起诉拿下的。物业拿「你没经过业主大会授权」「超出三年时效」抗辩的，都有判例明确不予支持。</p>
+        </div>
+      </div>
+    </div>
+    <p>佛山惠景城业委会的 9 场诉讼不是一蹴而就，而是<strong>一场一场打、一场一场赢</strong>，先固定知情权，再逐步扩展到公共收益追索。查账类诉讼技术含量不低，证据清单怎么写、诉求怎么列，直接决定能拿到多少年的账。</p>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">两步走</span><span class="case-name">东莞莲花案：先确权、后追索的完整路径</span></div>
+      <div class="case-meta">(2025)粤19民终5741号 · 广东省东莞市中级人民法院 · 二审维持</div>
+      <p>东莞莲花小区的做法是教科书式的<strong>两步走</strong>：第一步打<strong>物权保护诉讼</strong>，确认架空层、管理用房、会所、仓库属于业主共有部分（二审维持、完胜）；第二步发《关于返还业主共有资金的告知函》，要求物业返还历年<strong>停车费、广告费、会所租金、游泳池承包费</strong>，对方不回应再起诉追索。查账、确权、追钱，一步一个脚印。</p>
+      <div class="case-difficulty"><strong>规则：</strong>没有确权基础直接追索，法院难以判断收益是否属于"共有部分收益"，要么驳回要么中止；<strong>先确权→再追索</strong>是广东律师总结的高胜率路径（见 obsidian 实务·公共收益追索诉讼指引）。</div>
+    </div>
+    <div class="case-card">
+      <div class="case-card-head"><span class="case-amount">广州</span><span class="case-name">欣茂物业案：公共收益该返还得返还，维修费不能拿来抵扣</span></div>
+      <div class="case-meta">(2023)粤01民终11683号 · 广州市中级人民法院 · 二审</div>
+      <p>广州增城新都盛世名门小区业委会诉欣茂物业：物业公司主张以公共收益冲抵维修费等支出，法院不予支持——<strong>公共收益（停车费、管理费等）归业主共有，物业不得擅自抵扣、挪作他用</strong>。这是广州本地的直接判例，业主主张返还公共收益时可以援引。</p>
+      <div class="case-difficulty"><strong>规则：</strong>① 公共收益与物业服务成本两本账，不能混抵；② 物业主张"合理成本"须举证（合同、发票、分摊表）。</div>
+    </div>
+
+    <h2>六、能请第三方审计吗？钱谁出？</h2>
+    <p>能。《广州市业主共有资金管理办法》第 23 条给了明确依据：</p>
+    <div class="tip-box">
+      <div class="tip-box-title">📋 广州业主的三项审计权利</div>
+      <p><strong>谁可以请：</strong>业主委员会、物业管理委员会或居民委员会可以聘请专业机构，对共有资金的收支情况进行审计。<br>
+      <strong>谁必须配合：</strong>共有资金管理单位应当依法配合，开户银行应当予以协助——物业不配合，本身就可能被查处。<br>
+      <strong>钱谁出：</strong>审计费用在共有资金中列支的，须经业主共同决定或业主大会决定。</p>
+    </div>
+    <p>专业审计的价值，上海中远两湾城案已经演示过：物业拒绝配合审计，业委会请专业团队把 20 年财务查透，最终追回 4000 万。审计报告到了法庭上，就是最硬的证据。</p>
+
+    <h2>七、广州业主最常问的七个问题</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">业主能查物业的哪些账？</div>
+        <div class="faq-a">民法典第 943 条要求公开服务事项、收费项目、维修资金使用情况、共有部分经营与收益情况；最高法解释第 13 条列了五类应公开资料，包括维修资金筹集使用情况、物业服务合同、共有部分的使用和收益情况等。广州《业主共有资金管理办法》第 22 条进一步要求按季公开账户、筹集、结余、支付信息，业主异议 7 日内书面答复。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">物业只贴个收支表，算数吗？</div>
+        <div class="faq-a">不算。佛山高明法院 2025 年判例明确：张贴简单收支情况表不足以满足业主知情权、监督权，物业须提供合同、付款凭证、银行交易明细等原始凭证供查阅、复印、拍照。只有几个汇总数字、没有原始凭证，等于没查。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">能查原始发票和合同吗？</div>
+        <div class="faq-a">能。上海一中院（2021）沪01民终4922号确认知情权包括查阅权和复制权，账目明细、汇款凭证、票据、外包合同、广告合同、租赁合同都要提供。复制费用业主自担；涉及第三方商业秘密的可能只提供查阅。注意广东碧桂园案与中山等地对原始凭证口径不一致，起诉前先确认受理法院口径。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">能查几年的账？能倒查多少年？</div>
+        <div class="faq-a">佛山惠景城案（（2024）粤06民终556号，二审维持）支持倒查 14 年：物业须提供 2009 年至 2023 年共 14 年的停车收入明细、公共收益会计凭证、物业服务合同、电梯维修合同。业主知情权不受 3 年诉讼时效限制，可追溯到物业开始管理时。但追钱（返还请求权）有时效问题，先查账最稳。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">物业不给查怎么办？</div>
+        <div class="faq-a">三步走：先书面发函申请（留下证据）；再向区住建部门、街道办投诉，依据广州办法第 25 条，不公开收支、不答复异议、不配合审计的由区住建部门依法查处；最后起诉业主知情权纠纷，单个业主也能起诉，佛山惠景城业委会 3 年 9 场诉讼分步推进就是这个打法。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">可以委托审计吗？审计费用谁出？</div>
+        <div class="faq-a">可以。广州办法第 23 条规定，业委会、物管会或居委会可聘请专业机构审计共有资金收支，管理单位应依法配合，开户银行应予协助。审计费用在共有资金中列支的，须经业主共同决定或业主大会决定。上海中远两湾城追回 4000 万，靠的就是专业审计把 20 年账查透。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">没有业委会，单个业主能查吗？</div>
+        <div class="faq-a">能。业主知情权是每位业主的法定权利，不依赖业委会。佛山高明碧桂园案就是单个业主苏女士起诉物业，法院支持其查阅 2010 年至今的原始凭证，物业以「业主未取得全体业主授权」抗辩被驳回。不过单个业主起诉要自担诉讼成本，有条件还是先推动成立业委会。</div>
+      </div>
+    </div>
+
+    <hr class="article-divider">
+
+    <div class="article-author">
+      <div class="article-author-info">
+        <h4>吴瑞祥 律师</h4>
+        <p>执业十年，专注业主方物业纠纷：业主知情权、公共收益追索、物业费争议、业委会换届、换物业、业主撤销权。曾任物业集团法务，熟悉物业内部运营与诉讼套路——物业的套路我最懂，帮你拆招。</p>
+        <p>广东观象律师事务所（广州）· 只代理业主、业委会一方<br>执业资格与联系方式详见 <a href="../index.html">个人主页</a></p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      本文基于公开裁判文书与现行法律法规整理，仅供普法参考，不构成个案法律意见。本文仅面向业主/业主组织，法律问题请咨询执业律师。案号、金额以法院最终生效文书为准；中山及部分未提供案号的案例按公开报道与案例库口径表述，引用前请核实。涉及具体纠纷，请携带材料咨询吴律师。
+    </div>
+
+  </div>
+</article>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-bottom">© 2026 吴瑞祥律师 · 广东观象律师事务所</div>
+    <div class="footer-links">
+      <a href="../index.html">首页</a>
+      <a href="../blog.html">文章</a>
+      <a href="../cases.html">案例</a>
+      <a href="../index.html#contact">联系</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+window.addEventListener('scroll', function () {
+  document.querySelector('.scroll-top').classList.toggle('visible', window.scrollY > 400);
+});
+</script>
+
+</body>
+</html>
