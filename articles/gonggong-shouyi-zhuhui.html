@@ -218,6 +218,13 @@ body { font-family: var(--font-sans); color: var(--color-text); line-height: 1.8
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .case-amount { font-size: 1.5rem; }
 }
+
+/* ===== 深蓝卡文字强制覆盖（2026-08-23 用户要求：深蓝底+金色字）===== */
+.case-card { background-color: #1a2332 !important; }
+.case-card, .case-card * { color: #e9dcae !important; }
+.case-card .case-name, .case-card .case-amount, .case-card .case-difficulty strong, .case-card h3 { color: #c9a86c !important; font-weight: 700; }
+.case-card .case-meta { color: #d4c58f !important; }
+
 </style>
 </head>
 <body>
