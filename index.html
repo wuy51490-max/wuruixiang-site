@@ -445,6 +445,19 @@ body {
   color: var(--color-accent);
 }
 
+/* ===== FAQ ===== */
+.faq { background: var(--color-white); }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.faq-item { background: var(--color-bg); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary); border-radius: 10px; padding: 26px 28px; transition: var(--transition); }
+.faq-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.faq-item h3 { font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-primary); margin-bottom: 10px; line-height: 1.5; }
+.faq-item p { font-size: 0.92rem; color: var(--color-text-light); line-height: 1.8; margin-bottom: 12px; }
+.faq-item a { color: var(--color-secondary); font-weight: 600; text-decoration: none; font-size: 0.92rem; }
+.faq-item a:hover { text-decoration: underline; }
+.faq-note { text-align: center; margin-top: 32px; font-size: 0.9rem; color: var(--color-text-light); }
+.faq-note a { color: var(--color-secondary); text-decoration: none; font-weight: 600; }
+.faq-note a:hover { text-decoration: underline; }
+
 /* Lightbox */
 .lightbox {
   position: fixed;
@@ -704,6 +717,60 @@ body {
       "name": "业主方物业纠纷律师吴瑞祥",
       "url": "https://wuruixiang.com",
       "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://wuruixiang.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "电梯广告费、停车费这些公共收益到底归谁？物业不公示能查账吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "电梯广告费、地面停车费等利用业主共有部分产生的收入，扣除合理成本后归全体业主共有，不属于物业公司。物业应当定期公示公共收益收支，业主有权查阅。广州业主可通过业主知情权诉讼等方式要求物业公开账目、返还公共收益。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "物业费能拒交吗？物业服务差能少交吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "物业费不能随意拒交。但如果物业服务存在严重瑕疵、未达到合同约定标准，业主可以主张按质论价、酌情减免，或在被物业起诉时以服务质量不合格进行抗辩。以拒交物业费对抗服务瑕疵可能被认定违约，建议通过合法途径维权。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "广州业委会怎么成立？需要多少业主同意？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "广州成立业委会通常需经过提出申请、成立筹备组、召开业主大会、选举业委会、备案等流程。业主大会会议应当由专有部分面积占比三分之二以上且人数占比三分之二以上的业主参与表决。广州各街道（镇）对流程有具体指引，可咨询属地街道物管科。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "物业的账，业主能查到多深？能查多少年？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "业主对物业费收支、公共收益、维修资金等享有知情权，可以查阅、复制相关账目和资料。法院支持的查询范围包括物业服务合同、收费明细、公共收益台账等，实务中倒查年限可达数年甚至十几年。物业拒绝公开的，业主可提起知情权诉讼。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "地面车位、人防车位、架空层到底归谁？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "占用业主共有道路或其他场地划设的地面车位，属于业主共有；人防车位的权属与收益规则较为特殊，需结合分摊、登记等事实判断；架空层等共有部分的收益归全体业主。车位权属争议在广州司法实践中常见，需依据规划、分摊、登记等证据综合认定。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "物业专项维修资金怎么用？开发商没交能追吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "住宅专项维修资金专项用于住宅共用部位、共用设施设备保修期满后的维修和更新改造，使用需经业主表决。开发商未按规定交存首期维修资金的，业主委员会可以依法起诉追缴，实践中已有业委会追缴开发商维修资金成功的案例。"
+          }
+        }
+      ]
     }
   ]
 }
@@ -925,6 +992,50 @@ body {
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="section-container">
+    <div class="section-header">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title">业主常见问题</h2>
+      <p class="section-desc">广州业主最关心的物业纠纷问题，点击查看详细解答</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>电梯广告费、停车费这些公共收益到底归谁？</h3>
+        <p>电梯广告费、停车费等利用业主共有部分产生的收入归全体业主共有。物业不公示能查账吗？怎么追回来？</p>
+        <a href="articles/gonggong-shouyi-zhuhui.html">查看详细解答 →</a>
+      </div>
+      <div class="faq-item">
+        <h3>物业费能拒交吗？物业服务差能少交吗？</h3>
+        <p>拒交物业费可能被认定违约，但服务不达标可以主张减免。换物业、退场、诉讼时效怎么算？</p>
+        <a href="articles/wuye-fuwu-jiufen.html">查看详细解答 →</a>
+      </div>
+      <div class="faq-item">
+        <h3>广州业委会怎么成立？需要多少业主同意？</h3>
+        <p>从10%业主联名到备案的全流程，双三分之二表决规则，街道备案要点，广州各区的实操路径。</p>
+        <a href="articles/yeweihui-chengli-gz.html">查看详细解答 →</a>
+      </div>
+      <div class="faq-item">
+        <h3>物业的账，业主能查到多深？能查多少年？</h3>
+        <p>业主知情权包括哪些资料？公共收益台账、物业费收支、维修资金明细，法院支持查多深？</p>
+        <a href="articles/zhiqingquan.html">查看详细解答 →</a>
+      </div>
+      <div class="faq-item">
+        <h3>地面车位、人防车位、架空层到底归谁？</h3>
+        <p>地面车位归业主共有，人防车位权属特殊，架空层收益归全体业主。广州业主买车位前必看。</p>
+        <a href="articles/chewei-quanshu.html">查看详细解答 →</a>
+      </div>
+      <div class="faq-item">
+        <h3>物业专项维修资金怎么用？开发商没交能追吗？</h3>
+        <p>维修资金的交存、使用、续筹规则，以及开发商不交首期维修资金时业委会如何起诉追缴。</p>
+        <a href="articles/weixiu-zijin.html">查看详细解答 →</a>
+      </div>
+    </div>
+    <p class="faq-note">更多物业法律问题，见 <a href="blog.html">物业专家解码</a> 专栏</p>
   </div>
 </section>
 
