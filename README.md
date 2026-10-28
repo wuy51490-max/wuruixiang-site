@@ -20,6 +20,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `cases.html`、`case-*.html`：亲办案例列表及详情。
 - `blog.html`、`articles/`：专业文章列表及详情。
 - `assets/site.css`、`assets/site.js`：全站公共样式和交互。
+- `assets/apple-home.css`：第二版首页的苹果官网视觉方向，独立于详情页样式。
 - `assets/reading.css`：文章与案例详情的阅读布局。
 - `images/`：保留的原始人物照、证书和判决图。
 - `CNAME`：原有域名配置，保持原样。
@@ -28,6 +29,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 - 改版前提交：`041e3eff3681863d2a935dde17fd3338a29dbe26`。
 - 原版回滚标签：`backup/before-apple-redesign-20261028`。
+- 第一版改稿：`51fae440551afee0a2759abb4ef32ca4e613c0bc`，标签 `backup/apple-first-layout-20261028`。
 - 新版分支：`redesign/apple-design-20261028`。
 
 本次还保存了独立 Git bundle 和原站源码 ZIP。先保存当前工作，再从回滚标签在新目录恢复，避免覆盖任何后续修改。
