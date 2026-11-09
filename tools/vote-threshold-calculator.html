@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>业主大会表决门槛计算器｜广州业委会</title>
+<meta content="按《民法典》第二百七十八条和《广州市物业管理条例》第二十二条，计算业主大会参与门槛与同意门槛，判断表决是否达到法定比例。输入面积和人数即可得出结果。" name="description"/>
+<link href="https://wuruixiang.com/tools/vote-threshold-calculator.html" rel="canonical"/>
+<style>
+  :root{
+    --ink:#1a2332; --muted:#5b6675; --line:#d9dee6; --bg:#f7f5f0;
+    --red:#a4262c; --green:#1f6b45; --amber:#8a5a00; --blue:#1a4f7a;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Songti SC","STSong","Noto Serif SC",serif;
+    line-height:1.75; font-size:16px;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:28px 18px 60px}
+  header{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:24px}
+  h1{font-size:26px;margin:0 0 8px;letter-spacing:.5px}
+  .sub{color:var(--muted);font-size:14px;margin:0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:20px;margin-bottom:20px}
+  h2{font-size:18px;margin:0 0 14px;padding-left:10px;border-left:4px solid var(--ink)}
+  label{display:block;font-size:14px;color:var(--muted);margin:14px 0 6px}
+  input[type=number]{
+    width:100%;padding:10px 12px;font-size:17px;font-family:inherit;
+    border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--ink);
+  }
+  input[type=number]:focus{outline:none;border-color:var(--blue)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:520px){.row{grid-template-columns:1fr}}
+  .hint{font-size:13px;color:var(--muted);margin-top:4px}
+  fieldset{border:0;padding:0;margin:0}
+  .opt{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--line);border-radius:3px;margin-bottom:8px;cursor:pointer;background:#fff}
+  .opt:hover{border-color:var(--blue)}
+  .opt input{margin-top:4px}
+  .opt span{font-size:15px}
+  button{
+    width:100%;padding:14px;margin-top:22px;font-size:17px;font-family:inherit;
+    background:var(--ink);color:#fff;border:0;border-radius:3px;cursor:pointer;
+  }
+  button:hover{background:#000}
+  .result{display:none;margin-top:22px;padding:20px;border-radius:4px;border:1px solid var(--line);background:#fbfaf7}
+  .verdict{font-size:22px;font-weight:700;margin:0 0 6px}
+  .pass{color:var(--green)} .fail{color:var(--red)} .warn{color:var(--amber)}
+  .metric{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .metric:last-child{border-bottom:0}
+  .metric b{font-variant-numeric:tabular-nums}
+  .note{font-size:13px;color:var(--muted);margin-top:14px}
+  .law{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:20px;padding-top:14px}
+  footer{margin-top:36px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<div style="max-width:820px;margin:0 auto;padding:16px 18px 0;font-size:13px;color:#5b6675;"><a href="../index.html" style="color:#1a4f7a;text-decoration:none;">首页</a><span style="margin:0 6px;">/</span><a href="../yeweihui-legal-service.html" style="color:#1a4f7a;text-decoration:none;">广州业委会法律服务</a><span style="margin:0 6px;">/</span><span>业主大会表决门槛计算器</span></div>
+<div class="wrap">
+
+<header>
+  <h1>业主大会表决门槛计算器</h1>
+  <p class="sub">按《民法典》第二百七十八条、《广州市物业管理条例》第二十二条的两步法计算：先看参与，再定同意。</p>
+</header>
+
+<div class="card">
+  <h2>一、小区基本情况</h2>
+  <div class="row">
+    <div>
+      <label for="totalArea">小区专有部分总面积（平方米）</label>
+      <input id="totalArea" type="number" min="0" step="0.01" placeholder="例如 120000">
+    </div>
+    <div>
+      <label for="totalOwners">业主总人数（人）</label>
+      <input id="totalOwners" type="number" min="0" step="1" placeholder="例如 1200">
+    </div>
+  </div>
+  <p class="hint">
+    面积口径：已登记的按不动产登记簿记载；未登记的按测绘机构实测面积；未实测的按房屋买卖合同记载。<br>
+    人数口径：一个专有部分算一人；建设单位未出售、已出售未交付的部分算一人；同一买受人拥有多个专有部分的算一人。<br>
+    依据：《广州市物业管理条例》第二十八条。
+  </p>
+</div>
+
+<div class="card">
+  <h2>二、本次表决事项</h2>
+  <fieldset>
+    <label class="opt">
+      <input type="radio" name="itemType" value="half" checked>
+      <span><b>一般事项（过半数）</b><br>选聘和解聘物业服务企业、使用维修资金、制定议事规则和管理规约、选举业委会、其他共有和共同管理权利的重大事项。</span>
+    </label>
+    <label class="opt">
+      <input type="radio" name="itemType" value="threeQuarter">
+      <span><b>重大事项（四分之三）</b><br>筹集维修资金、改建重建建筑物及其附属设施、改变共有部分用途或者利用共有部分从事经营活动。</span>
+    </label>
+  </fieldset>
+</div>
+
+<div class="card">
+  <h2>三、实际表决数据</h2>
+  <div class="row">
+    <div>
+      <label for="joinArea">参与表决的专有部分面积（平方米）</label>
+      <input id="joinArea" type="number" min="0" step="0.01" placeholder="含同意、反对、弃权">
+    </div>
+    <div>
+      <label for="joinOwners">参与表决的业主人数（人）</label>
+      <input id="joinOwners" type="number" min="0" step="1" placeholder="含同意、反对、弃权">
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <label for="yesArea">同意票的专有部分面积（平方米）</label>
+      <input id="yesArea" type="number" min="0" step="0.01" placeholder="只填同意">
+    </div>
+    <div>
+      <label for="yesOwners">同意票的业主人数（人）</label>
+      <input id="yesOwners" type="number" min="0" step="1" placeholder="只填同意">
+    </div>
+  </div>
+  <p class="hint">未投票的业主，其投票权数不计入已表决票。</p>
+  <button id="calc" type="button">计算</button>
+
+  <div class="result" id="result">
+    <p class="verdict" id="verdict"></p>
+    <p class="hint" id="verdictSub"></p>
+
+    <div class="metric"><span>参与门槛（面积三分之二）</span><b id="mAreaJoin"></b></div>
+    <div class="metric"><span>参与门槛（人数三分之二）</span><b id="mOwnerJoin"></b></div>
+    <div class="metric"><span>同意门槛（参与面积）</span><b id="mAreaYes"></b></div>
+    <div class="metric"><span>同意门槛（参与人数）</span><b id="mOwnerYes"></b></div>
+
+    <p class="note" id="advice"></p>
+  </div>
+
+  <p class="law">
+    法律依据：《中华人民共和国民法典》第二百七十八条；《广州市物业管理条例》第二十二条、第二十八条。<br>
+    本工具只做算术校验，不判断会议召集、议题设置、投票方式、委托手续、计票程序是否合法，也不判断议题是否属于业主共同决定事项。程序是否有效，须结合本小区议事规则和实际情况另行审查。<br>
+    输入口径不正确的，结果一定不正确。面积和人数必须先按第二十八条的口径核定，再填入本表。
+  </p>
+</div>
+
+<footer>
+  本工具由吴瑞祥律师整理，仅供参考，不构成法律意见。<br>
+  广东观象律师事务所 · 执业证号 14401201810066196 · 只服务业主方
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const pct = (a,b) => b > 0 ? (a / b * 100) : NaN;
+  const fmt = n => isNaN(n) ? "—" : n.toFixed(2) + "%";
+
+  function calc(){
+    const totalArea = parseFloat($("totalArea").value) || 0;
+    const totalOwners = parseFloat($("totalOwners").value) || 0;
+    const joinArea = parseFloat($("joinArea").value) || 0;
+    const joinOwners = parseFloat($("joinOwners").value) || 0;
+    const yesArea = parseFloat($("yesArea").value) || 0;
+    const yesOwners = parseFloat($("yesOwners").value) || 0;
+    const type = document.querySelector('input[name="itemType"]:checked').value;
+
+    if(!totalArea || !totalOwners){
+      alert("请先填写小区专有部分总面积和业主总人数。");
+      return;
+    }
+    if([totalArea, totalOwners, joinArea, joinOwners, yesArea, yesOwners].some(n => n < 0)){
+      alert("数值不能为负数。");
+      return;
+    }
+    if(yesArea > joinArea || yesOwners > joinOwners){
+      alert("同意票不能大于参与表决的票数，请检查是否填反了。");
+      return;
+    }
+    if(joinArea > totalArea || joinOwners > totalOwners){
+      alert("参与表决的数不能大于小区总数，请检查是否填反了。");
+      return;
+    }
+
+    const areaJoinRate = pct(joinArea, totalArea);
+    const ownerJoinRate = pct(joinOwners, totalOwners);
+    const EPS = 1e-9;
+    const joinOk = (joinArea / totalArea) >= (2 / 3) - EPS &&
+                   (joinOwners / totalOwners) >= (2 / 3) - EPS;
+
+    const need = type === "threeQuarter" ? 0.75 : 0.5;
+    const areaYesRate = pct(yesArea, joinArea);
+    const ownerYesRate = pct(yesOwners, joinOwners);
+    const yesOk = (yesArea / joinArea) >= need - EPS &&
+                  (yesOwners / joinOwners) >= need - EPS;
+
+    $("mAreaJoin").textContent = fmt(areaJoinRate) + "（需 ≥ 66.67%）";
+    $("mOwnerJoin").textContent = fmt(ownerJoinRate) + "（需 ≥ 66.67%）";
+    $("mAreaYes").textContent = fmt(areaYesRate) + "（需 ≥ " + (need*100) + "%）";
+    $("mOwnerYes").textContent = fmt(ownerYesRate) + "（需 ≥ " + (need*100) + "%）";
+
+    const v = $("verdict"), vs = $("verdictSub"), advice = $("advice");
+    v.className = "verdict";
+
+    if(!joinOk && !yesOk){
+      v.classList.add("fail");
+      v.textContent = "不通过：参与门槛未达到";
+      vs.textContent = "参与表决的面积或人数不足三分之二，本次会议不能形成有效决定。";
+      advice.textContent = "补救方向：延长投票期、组织上门送达、核实业主清册是否有遗漏或面积登记错误。不要通过修改计票口径来凑比例。";
+    } else if(joinOk && !yesOk){
+      v.classList.add("fail");
+      v.textContent = "不通过：同意票不足";
+      vs.textContent = "参与门槛已达到，但同意比例未达到法定要求。";
+      advice.textContent = "补救方向：核对反对票和弃权票的构成，检查是否存在计票错误或面积重复计算。确因意见分歧未通过的，应重新沟通后再表决，不能直接宣布通过。";
+    } else if(!joinOk && yesOk){
+      v.classList.add("fail");
+      v.textContent = "不通过：参与门槛未达到";
+      vs.textContent = "同意票在参与业主中占比够，但参与人数或面积不足三分之二，会议仍不成立。";
+      advice.textContent = "这是最常见的误判：只看同意票，不看参与率。必须先满足参与门槛。";
+    } else {
+      v.classList.add("pass");
+      v.textContent = "通过";
+      vs.textContent = "参与门槛和同意门槛均已达到。";
+      const nearArea = areaYesRate < need*100 + 3 || ownerYesRate < need*100 + 3;
+      const nearJoin = areaJoinRate < 70 || ownerJoinRate < 70;
+      advice.textContent = (nearArea || nearJoin)
+        ? "注意：有一项指标接近临界值，建议把表决票、计票记录、公示照片完整存档，防止事后被质疑。"
+        : "表决数据满足法定门槛。仍需检查会议召集、公示期限、投票方式是否符合本小区议事规则。";
+    }
+
+    $("result").style.display = "block";
+    $("result").scrollIntoView({behavior:"smooth", block:"nearest"});
+  }
+
+  $("calc").addEventListener("click", calc);
+})();
+</script>
+</body>
+</html>

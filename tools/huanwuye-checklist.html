@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>换物业程序自检 20 项｜广州业委会</title>
+<meta content="换物业程序自检20项，覆盖决策前、表决、解聘、交接四个阶段，逐项提示法律后果和补救动作，生成风险清单和最先要补的三件事。" name="description"/>
+<link href="https://wuruixiang.com/tools/huanwuye-checklist.html" rel="canonical"/>
+<style>
+  :root{
+    --ink:#1a2332; --muted:#5b6675; --line:#d9dee6; --bg:#f7f5f0;
+    --red:#a4262c; --green:#1f6b45; --amber:#8a5a00; --blue:#1a4f7a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Songti SC","STSong","Noto Serif SC",serif;line-height:1.75;font-size:16px}
+  .wrap{max-width:820px;margin:0 auto;padding:28px 18px 60px}
+  header{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:22px}
+  h1{font-size:26px;margin:0 0 8px}
+  .sub{color:var(--muted);font-size:14px;margin:0}
+  .bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .bar-inner{display:flex;gap:12px;align-items:center;justify-content:space-between;font-size:14px}
+  .progress{flex:1;height:6px;background:#e6e2d8;border-radius:3px;overflow:hidden}
+  .progress i{display:block;height:100%;width:0;background:var(--ink);transition:width .2s}
+  h2{font-size:17px;margin:26px 0 12px;padding-left:10px;border-left:4px solid var(--ink)}
+  .item{background:#fff;border:1px solid var(--line);border-radius:4px;padding:14px 16px;margin-bottom:10px}
+  .q{font-size:16px;margin:0 0 10px}
+  .q b{color:var(--muted);font-weight:400;margin-right:6px}
+  .opts{display:flex;gap:8px;flex-wrap:wrap}
+  .opts label{flex:1;min-width:88px;text-align:center;padding:7px 10px;border:1px solid var(--line);border-radius:3px;font-size:14px;cursor:pointer;background:#fff}
+  .opts input{display:none}
+  .opts input:checked + span{font-weight:700}
+  .opts label:has(input[value="yes"]:checked){border-color:var(--green);background:#eef6f1;color:var(--green)}
+  .opts label:has(input[value="no"]:checked){border-color:var(--red);background:#fbeeee;color:var(--red)}
+  .opts label:has(input[value="unknown"]:checked){border-color:var(--amber);background:#fbf5e8;color:var(--amber)}
+  .explain{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:14px;color:var(--muted)}
+  .explain.show{display:block}
+  .explain p{margin:4px 0}
+  .explain .risk{color:var(--red)}
+  .explain .fix{color:var(--green)}
+  button{width:100%;padding:15px;margin-top:22px;font-size:17px;font-family:inherit;background:var(--ink);color:#fff;border:0;border-radius:3px;cursor:pointer}
+  .result{display:none;margin-top:20px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:4px}
+  .verdict{font-size:22px;font-weight:700;margin:0 0 8px}
+  .green{color:var(--green)} .amber{color:var(--amber)} .red{color:var(--red)}
+  .list{margin:10px 0 0;padding-left:20px;font-size:15px}
+  .list li{margin:6px 0}
+  footer{margin-top:34px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+  @media print{.bar,.opts,button{display:none}.explain{display:block!important}}
+</style>
+</head>
+<body>
+<div style="max-width:820px;margin:0 auto;padding:16px 18px 0;font-size:13px;color:#5b6675;"><a href="../index.html" style="color:#1a4f7a;text-decoration:none;">首页</a><span style="margin:0 6px;">/</span><a href="../yeweihui-legal-service.html" style="color:#1a4f7a;text-decoration:none;">广州业委会法律服务</a><span style="margin:0 6px;">/</span><span>换物业程序自检20项</span></div>
+<div class="wrap">
+
+<header>
+  <h1>换物业程序自检 20 项</h1>
+  <p class="sub">按广州现行规则编排。做完一遍，你就知道卡在哪一步、先补哪一件。</p>
+</header>
+
+<div class="bar">
+  <div class="bar-inner">
+    <span id="count">已答 0 / 20</span>
+    <div class="progress"><i id="bar"></i></div>
+  </div>
+</div>
+
+<form id="form">
+
+<h2>一、决策前</h2>
+
+<div class="item" data-stage="决策前">
+  <p class="q"><b>01</b>是否已取得业主清册和专有部分面积清册，并核对到户？</p>
+  <div class="opts">
+    <label><input type="radio" name="q1" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q1" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q1" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：表决基数是错的，后面算出什么比例都不成立，决议容易被撤销。</p>
+    <p class="fix">补救：向街道办或区房屋行政主管部门调取业主清册，面积按不动产登记簿、实测面积、买卖合同三层口径核定。</p>
+    <p>依据：《广州市物业管理条例》第二十八条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="决策前">
+  <p class="q"><b>02</b>是否已确认现有物业服务合同的到期日、通知期限和违约条款？</p>
+  <div class="opts">
+    <label><input type="radio" name="q2" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q2" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q2" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：可能错过通知期限，或触发违约赔偿。</p>
+    <p class="fix">补救：调取合同原件，核对期限、解约条件、违约金和交接条款。</p>
+    <p>依据：《中华人民共和国民法典》第九百四十六条、第九百四十七条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="决策前">
+  <p class="q"><b>03</b>是否确认小区现在适用的是前期物业服务合同，还是业主大会签订的物业服务合同？</p>
+  <div class="opts">
+    <label><input type="radio" name="q3" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q3" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q3" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：解聘依据和程序起点不同，前期合同在业主大会选聘新物业并签订合同后终止。</p>
+    <p class="fix">补救：查合同的签约主体和期限；新合同生效时，前期合同即终止。</p>
+    <p>依据：《广州市物业管理条例》第七十七条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="决策前">
+  <p class="q"><b>04</b>是否已核查公共收益、维修资金、共有资金的账目和余额？</p>
+  <div class="opts">
+    <label><input type="radio" name="q4" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q4" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q4" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：交接时最容易被带走或说不清的，就是这笔钱。</p>
+    <p class="fix">补救：书面要求物业公开共有部分经营与收益情况，并向业主大会、业委会报告；同步调取专户流水。</p>
+    <p>依据：《中华人民共和国民法典》第九百四十三条、第二百八十二条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="决策前">
+  <p class="q"><b>05</b>是否已确定新物业的选聘方式、评审规则和评分标准，并提前公示？</p>
+  <div class="opts">
+    <label><input type="radio" name="q5" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q5" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q5" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：评审规则临时改，最容易被人告暗箱操作。</p>
+    <p class="fix">补救：先由业委会会议表决通过选聘方案和评分表，再发布公告，规则定了不再改。</p>
+    <p>依据：《中华人民共和国民法典》第二百七十八条；《广州市物业管理条例》第二十二条、第七十六条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="决策前">
+  <p class="q"><b>06</b>是否评估过提前解聘可能给原物业造成的损失和赔偿风险？</p>
+  <div class="opts">
+    <label><input type="radio" name="q6" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q6" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q6" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：依法解聘造成物业损失的，除不可归责于业主的事由外，业主需要赔偿。</p>
+    <p class="fix">补救：把解聘理由固定为服务不达标、合同到期不续聘等有证据支撑的事由，并保留催告记录。</p>
+    <p>依据：《中华人民共和国民法典》第九百四十六条第二款。</p>
+  </div>
+</div>
+
+<h2>二、表决与授权</h2>
+
+<div class="item" data-stage="表决">
+  <p class="q"><b>07</b>解聘原物业和选聘新物业，是否分别作为独立议题表决？</p>
+  <div class="opts">
+    <label><input type="radio" name="q7" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q7" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q7" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：捆在一个议题里，业主没法分别表达意见，决议容易被认定程序违法。</p>
+    <p class="fix">补救：重新设计议题，解聘、选聘、授权签约分开列。</p>
+    <p>依据：《中华人民共和国民法典》第二百七十八条第一款第四项。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="表决">
+  <p class="q"><b>08</b>参与表决的专有部分面积和业主人数，是否都达到三分之二？</p>
+  <div class="opts">
+    <label><input type="radio" name="q8" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q8" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q8" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：参与门槛不够，会议不成立，同意票再多也无效。</p>
+    <p class="fix">补救：用计算器核对；不够就延长投票期、上门送达、核实清册，不要改计票口径。</p>
+    <p>依据：《中华人民共和国民法典》第二百七十八条第二款；《广州市物业管理条例》第二十二条第二款。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="表决">
+  <p class="q"><b>09</b>同意票是否达到参与表决面积和参与表决人数的过半数？</p>
+  <div class="opts">
+    <label><input type="radio" name="q9" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q9" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q9" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：选聘解聘属于过半数事项，不是全体业主的过半数。</p>
+    <p class="fix">补救：按参与表决的基数算，未投票的不计入已表决票。</p>
+    <p>依据：《中华人民共和国民法典》第二百七十八条第二款。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="表决">
+  <p class="q"><b>10</b>投票方式是否符合本小区议事规则，电子投票是否使用官方平台？</p>
+  <div class="opts">
+    <label><input type="radio" name="q10" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q10" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q10" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：用微信群接龙、纸质表代替正式投票，容易被质疑真实性。</p>
+    <p class="fix">补救：优先使用广州物业管理服务平台电子投票；书面征求意见的，逐户签收并留档。</p>
+    <p>依据：《广州市物业管理条例》第三十一条及本小区议事规则。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="表决">
+  <p class="q"><b>11</b>表决票、计票记录、公示照片和异议处理记录是否完整存档？</p>
+  <div class="opts">
+    <label><input type="radio" name="q11" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q11" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q11" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：一旦有人起诉撤销决议，你拿不出证据。</p>
+    <p class="fix">补救：纸质票原件封存，电子投票导出数据，公示拍照带时间和地点，异议逐件书面答复。</p>
+    <p>依据：《广州市物业管理条例》第二十四条、第二十五条。</p>
+  </div>
+</div>
+
+<h2>三、解聘与通知</h2>
+
+<div class="item" data-stage="解聘">
+  <p class="q"><b>12</b>是否已提前六十日书面通知原物业解聘，或按合同约定的期限通知？</p>
+  <div class="opts">
+    <label><input type="radio" name="q12" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q12" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q12" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：通知期限不足，解聘可能被认定违约。</p>
+    <p class="fix">补救：按合同约定优先；合同没约定的，提前六十日书面通知，从送达之日起算。</p>
+    <p>依据：《中华人民共和国民法典》第九百四十六条第一款。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="解聘">
+  <p class="q"><b>13</b>解聘通知的送达凭证是否留存？</p>
+  <div class="opts">
+    <label><input type="radio" name="q13" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q13" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q13" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：对方否认收到，通知期限无法证明。</p>
+    <p class="fix">补救：EMS 寄送并写明文件名称，保留回执和投递查询记录；必要时公证送达。</p>
+    <p>依据：民事诉讼证据规则。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="解聘">
+  <p class="q"><b>14</b>解聘和选聘结果是否已在小区显著位置向全体业主公告？</p>
+  <div class="opts">
+    <label><input type="radio" name="q14" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q14" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q14" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：业主不知情，后续收费和交接都会被质疑。</p>
+    <p class="fix">补救：公告栏、业主群、公众号同步发布，拍照留档并注明日期。</p>
+    <p>依据：《广州市物业管理条例》第二十四条、第二十五条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="解聘">
+  <p class="q"><b>15</b>新物业服务合同的条款、收费标准和收费方式，是否已谈定并公示？</p>
+  <div class="opts">
+    <label><input type="radio" name="q15" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q15" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q15" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：签了合同才发现涨价，业主会追究业委会责任。</p>
+    <p class="fix">补救：合同采用书面形式，服务事项、质量标准、收费标准、维修费用、违约责任逐项写清；合同订立后十五日内由物业服务人在市物业管理信息平台填报。</p>
+    <p>依据：《广州市物业管理条例》第七十六条、第七十七条。</p>
+  </div>
+</div>
+
+<h2>四、交接与接管</h2>
+
+<div class="item" data-stage="交接">
+  <p class="q"><b>16</b>是否已与原物业约定退出物业服务区域和移交的具体时间？</p>
+  <div class="opts">
+    <label><input type="radio" name="q16" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q16" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q16" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：合同终止后十五日内必须退出，拖下去容易变成既成事实。</p>
+    <p class="fix">补救：书面确定交接日期，形成交接清单，双方签字。</p>
+    <p>依据：《中华人民共和国民法典》第九百四十九条；《广州市物业管理条例》第七十八条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="交接">
+  <p class="q"><b>17</b>移交清单是否覆盖八类资料财物：承接查验资料、业主清册、共用部位和设施设备、维修改造技术资料、业主共有的固定设施设备、共有资金、酬金制预收资金和财务资料、其他财物？</p>
+  <div class="opts">
+    <label><input type="radio" name="q17" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q17" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q17" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：最常见的是账目和公共收益被带走，事后再追很难。</p>
+    <p class="fix">补救：按八类逐项列清单，缺一项写一项，交接时当场核对。</p>
+    <p>依据：《广州市物业管理条例》第七十八条第一款。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="交接">
+  <p class="q"><b>18</b>是否已组织共用部位、共用设施设备查验，并与新物业签订物业验收协议？</p>
+  <div class="opts">
+    <label><input type="radio" name="q18" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q18" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q18" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：电梯、消防、监控的隐患会在新物业进场后变成业主的责任。</p>
+    <p class="fix">补救：逐项查验并拍照，问题清单作为验收协议附件，明确整改责任和期限。</p>
+    <p>依据：《广州市物业管理条例》第七十八条第三款。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="交接">
+  <p class="q"><b>19</b>原物业拒不退出或拒不移交的，是否已向街道办、区房屋行政主管部门报告并请求公安协助？</p>
+  <div class="opts">
+    <label><input type="radio" name="q19" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q19" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q19" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：只靠业委会自己堵门、贴告示，容易激化冲突还可能违法。</p>
+    <p class="fix">补救：书面报告并保留回执；拒不移交的，业主可以不支付合同终止后的物业费；主管部门可责令退出并罚款。</p>
+    <p>依据：《广州市物业管理条例》第七十九条、第一百零四条。</p>
+  </div>
+</div>
+
+<div class="item" data-stage="交接">
+  <p class="q"><b>20</b>新物业接管前的空档期，服务是否已安排？</p>
+  <div class="opts">
+    <label><input type="radio" name="q20" value="yes"><span>已做</span></label>
+    <label><input type="radio" name="q20" value="no"><span>没做</span></label>
+    <label><input type="radio" name="q20" value="unknown"><span>不确定</span></label>
+  </div>
+  <div class="explain">
+    <p class="risk">没做：保安保洁停摆，电梯消防无人管，出事是全体业主承担。</p>
+    <p class="fix">补救：接管前原物业应当继续服务；业主大会决定拒绝其继续服务的，由街道办会同区房屋行政主管部门确定临时物业服务人，期限一般不超过六个月。</p>
+    <p>依据：《中华人民共和国民法典》第九百五十条；《广州市物业管理条例》第八十条。</p>
+  </div>
+</div>
+
+</form>
+
+<button id="calc" type="button">生成自检结果</button>
+
+<div class="result" id="result">
+  <p class="verdict" id="verdict"></p>
+  <p id="summary"></p>
+  <h3 style="font-size:16px;margin:18px 0 6px">最该先补的三件事</h3>
+  <ol class="list" id="todo"></ol>
+  <p style="font-size:13px;color:var(--muted);margin-top:16px">
+    本自检只覆盖常见程序节点，不替代对具体合同、议事规则和表决材料的审查。结果仅供参考。
+  </p>
+</div>
+
+<footer>
+  吴瑞祥律师 · 广东观象律师事务所 · 执业证号 14401201810066196 · 只服务业主方<br>
+  法律依据：《中华人民共和国民法典》第二百七十八条、第九百四十三条、第九百四十六条至第九百五十条；《广州市物业管理条例》第二十二条、第二十四条、第二十五条、第二十八条、第三十一条、第七十六条至第八十条、第一百零四条。
+</footer>
+
+</div>
+
+<script>
+(function(){
+  const form = document.getElementById("form");
+  const items = Array.from(document.querySelectorAll(".item"));
+  const total = items.length;
+
+  function updateProgress(){
+    let answered = 0;
+    items.forEach(it => {
+      if(it.querySelector('input[type=radio]:checked')) answered++;
+      const ex = it.querySelector(".explain");
+      const checked = it.querySelector('input[type=radio]:checked');
+      ex.classList.toggle("show", !!checked && checked.value !== "yes");
+    });
+    document.getElementById("count").textContent = "已答 " + answered + " / " + total;
+    document.getElementById("bar").style.width = (answered / total * 100) + "%";
+  }
+
+  form.addEventListener("change", updateProgress);
+
+  document.getElementById("calc").addEventListener("click", function(){
+    const missing = items.filter(it => !it.querySelector('input[type=radio]:checked'));
+    if(missing.length){
+      alert("还有 " + missing.length + " 项没有作答。不确定的可以选「不确定」，但不能空着。");
+      return;
+    }
+
+    const stageWeight = {"决策前":0, "表决":1, "解聘":2, "交接":3};
+    let noList = [], unknownList = [], yesCount = 0;
+
+    items.forEach((it, idx) => {
+      const v = it.querySelector('input[type=radio]:checked').value;
+      const text = it.querySelector(".q").textContent.replace(/^\s*\d+\s*/, "").trim();
+      const rec = { idx, stage: it.dataset.stage, text, v };
+      if(v === "yes") yesCount++;
+      else if(v === "no") noList.push(rec);
+      else unknownList.push(rec);
+    });
+
+    const problems = noList.length + unknownList.length;
+    const v = document.getElementById("verdict");
+    const summary = document.getElementById("summary");
+    v.className = "verdict";
+
+    if(problems === 0){
+      v.classList.add("green");
+      v.textContent = "程序基本齐全";
+      summary.textContent = "20 项全部已做。仍建议把表决票、计票记录、公示照片和交接清单完整存档，防止事后被质疑。";
+    } else if(noList.length === 0){
+      v.classList.add("amber");
+      v.textContent = "有 " + unknownList.length + " 项不确定";
+      summary.textContent = "没有明确没做的，但不确定等于没有证据。先把不确定的逐项查实，再往下走。";
+    } else if(noList.length <= 4){
+      v.classList.add("amber");
+      v.textContent = "有 " + noList.length + " 项没做，存在被撤销或交接失败的风险";
+      summary.textContent = "已做 " + yesCount + " 项，没做 " + noList.length + " 项，不确定 " + unknownList.length + " 项。建议先补关键节点，再启动下一步。";
+    } else {
+      v.classList.add("red");
+      v.textContent = "有 " + noList.length + " 项没做，现在推进风险很高";
+      summary.textContent = "已做 " + yesCount + " 项，没做 " + noList.length + " 项，不确定 " + unknownList.length + " 项。建议暂停推进，先把决策和表决程序补齐。";
+    }
+
+    const urgent = noList.concat(unknownList)
+      .sort((a,b) => stageWeight[a.stage] - stageWeight[b.stage] || a.idx - b.idx)
+      .slice(0,3);
+
+    const todo = document.getElementById("todo");
+    todo.innerHTML = "";
+    urgent.forEach(r => {
+      const li = document.createElement("li");
+      li.textContent = "【" + r.stage + "】" + r.text.replace(/是否/g, "");
+      todo.appendChild(li);
+    });
+    if(!urgent.length){
+      const li = document.createElement("li");
+      li.textContent = "当前没有明显缺口，保持材料存档。";
+      todo.appendChild(li);
+    }
+
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").scrollIntoView({behavior:"smooth", block:"nearest"});
+  });
+
+  updateProgress();
+})();
+</script>
+</body>
+</html>
