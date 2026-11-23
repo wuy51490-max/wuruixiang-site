@@ -234,3 +234,25 @@
   .editorial-home #about .about-image img { max-height: 240px; object-position: 50% 25%; }
   .featured-case, .case-band .case-index { grid-template-columns: 1fr; }
 }
+
+.contact-reach {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px 34px;
+  margin-top: 20px;
+}
+.contact-reach .contact-details { flex: 1 1 235px; min-width: 0; margin: 0; }
+
+/* The source QR stays square and keeps its white scan margin at every width. */
+.contact-wechat {
+  display: inline-grid;
+  grid-template-columns: minmax(0, 172px);
+  justify-items: center;
+  margin: 0;
+}
+.contact-wechat a { display: block; background: #fff; border-radius: var(--radius); }
+.contact-wechat img { width: 100%; height: auto; }
+.contact-wechat a:focus-visible { outline-color: var(--gold-light); }
+.contact-wechat figcaption { margin-top: 8px; color: var(--on-navy); font-size: .875rem; }
+.contact-copy .contact-phone { display: flex; width: fit-content; }
