@@ -40,20 +40,40 @@
   const count = document.querySelector('#resultCount');
   const empty = document.querySelector('#searchEmpty');
   if (search && count && empty) {
+    const topics = document.querySelector('#topicFilter');
+    const filters = [...(topics?.querySelectorAll('[data-topic-filter]') ?? [])];
+    let topic = '';
+
+    const setTopic = value => {
+      topic = value;
+      filters.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.topicFilter === topic));
+      });
+    };
+
     const filter = () => {
       const words = search.value.trim().toLocaleLowerCase('zh-CN').split(/\s+/).filter(Boolean);
       let visible = 0;
       cards.forEach(card => {
         const haystack = card.textContent.toLocaleLowerCase('zh-CN');
-        card.hidden = !words.every(word => haystack.includes(word));
+        const matchesTopic = !topic || card.dataset.topic === topic;
+        card.hidden = !matchesTopic || !words.every(word => haystack.includes(word));
         if (!card.hidden) visible += 1;
       });
-      count.textContent = words.length ? `找到 ${visible} 篇文章` : `全部文章 · ${cards.length} 篇`;
+      count.textContent = words.length || topic ? `找到 ${visible} 篇文章` : `全部文章 · ${cards.length} 篇`;
       empty.hidden = visible > 0;
     };
+    if (topics && filters.length) {
+      topics.hidden = false;
+      filters.forEach(button => button.addEventListener('click', () => {
+        setTopic(button.dataset.topicFilter);
+        filter();
+      }));
+    }
     search.addEventListener('input', filter);
     document.querySelector('#clearSearch')?.addEventListener('click', () => {
       search.value = '';
+      setTopic('');
       filter();
       search.focus();
     });
